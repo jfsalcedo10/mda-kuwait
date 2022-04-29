@@ -1,0 +1,10 @@
+name: mda_2022
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyterlab
+  - pandas
+  - scikit-learn
+  - nltk
+prefix: C:\Users\juans\anaconda3\envs\mda_2022
