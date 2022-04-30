@@ -122,9 +122,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/jfsalcedo10/mda-kuwait.git
    ```
-2. Create conda environment with ´project_environment.txt´ file 
+2. Create conda environment with ´project_environment.yml´ file 
    ```sh
-   conda create --name <your_env_name> --file project_environment.txt
+   conda create --name <your_env_name> --file project_environment.yml
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
