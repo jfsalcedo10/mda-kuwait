@@ -1,5 +1,6 @@
 import pdfplumber
 import re
+import unicodedata
 
 
 class PDFHandler:
@@ -23,6 +24,10 @@ class PDFHandler:
 
         for i in range(len(self.pdf.pages)):
             text = self.pdf.pages[i].extract_text()
+            # \xa0 and a space look the same but have different encoding
+            # text = text.replace(u'\xa0', u' ')
+            # characters that look the same but have different encodings are normalized
+            text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
 
             search = re.search(pat, text)
 
@@ -30,23 +35,13 @@ class PDFHandler:
                 day = search.group("day")
                 mon = search.group("mon")
                 year = search.group("year")
-                # loc_s = search.group("location_small")
-                # loc_b = search.group("location_big")
                 loc = search.group("location")
 
                 if day is not None and mon is not None and year is not None:
                     self.date = [day.strip(), mon.strip(), year.strip()]
 
                 if loc is not None:
-                    self.location = [loc]
-
-                # if loc_s is not None and loc_b is not None:
-                #     loc_s = loc_s.strip()
-                #     loc_b = loc_b.strip()
-                #     if loc_s == 'Washington' and loc_b == 'D.C.':
-                #         loc_s = 'unknown_location_small'
-                #         loc_b = 'Washington, D.C.'
-                #     self.location = [loc_s, loc_b]
+                    self.location = [loc.strip()]
 
             full_text += search.group("content") + " "
 
