@@ -27,10 +27,26 @@ class PDFHandler:
             search = re.search(pat, text)
 
             if i == 0:
-                if not search.group("day") is None and not search.group("mon") is None and not search.group("year") is None:
-                    self.date = [search.group("day").strip(), search.group("mon").strip(), search.group("year").strip()]
-                if not search.group("location_small") is None and not search.group("location_big") is None:
-                    self.location = [search.group("location_small").strip(), search.group("location_big").strip()]
+                day = search.group("day")
+                mon = search.group("mon")
+                year = search.group("year")
+                # loc_s = search.group("location_small")
+                # loc_b = search.group("location_big")
+                loc = search.group("location")
+
+                if day is not None and mon is not None and year is not None:
+                    self.date = [day.strip(), mon.strip(), year.strip()]
+
+                if loc is not None:
+                    self.location = [loc]
+
+                # if loc_s is not None and loc_b is not None:
+                #     loc_s = loc_s.strip()
+                #     loc_b = loc_b.strip()
+                #     if loc_s == 'Washington' and loc_b == 'D.C.':
+                #         loc_s = 'unknown_location_small'
+                #         loc_b = 'Washington, D.C.'
+                #     self.location = [loc_s, loc_b]
 
             full_text += search.group("content") + " "
 
@@ -47,10 +63,22 @@ class PDFHandler:
         if len(self.date) > 0:
             return self.date.copy()
         else:
-            return ["unknown"]
+            return ["unknown_date"]
 
     def get_location(self):
         if len(self.location) > 0:
             return self.location.copy()
         else:
-            return ["unknown"]
+            return ["unknown_location"]
+
+    @staticmethod
+    def multiple_speakers(text):
+        pat = re.compile(r"[a-z0-9]+\s*:", re.I)
+        all_speakers = pat.findall(text)
+        all_speakers = [s.lower() for s in all_speakers]
+        print('"Obama:" count:', all_speakers.count('obama:'))
+        print('"President:" count:', all_speakers.count('president:'))
+        print('"Question:" count:', all_speakers.count('question:'))
+        print('"Audience:" count:', all_speakers.count('audience:'))
+        print('"Member:" count:', all_speakers.count('member:'))
+        return all_speakers
