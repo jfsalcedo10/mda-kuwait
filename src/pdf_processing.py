@@ -11,10 +11,10 @@ class PDFHandler:
         self.title = filepath.parts[-1].split(".")[0]
 
     def print_info(self):
-        print('Title:', self.title)
-        print("Number of pages:", len(self.pdf.pages))
-        print("Date:", self.get_date())
-        print("Location:", self.get_location())
+        print('Title:', self.get_title())
+        print("Number of pages:", self.get_nb_pages())
+        print("Date:", self.get_date_str())
+        print("Location:", self.get_location_str())
 
     def original_page(self, page_number):
         return self.pdf.pages[page_number].extract_text()
@@ -24,8 +24,6 @@ class PDFHandler:
 
         for i in range(len(self.pdf.pages)):
             text = self.pdf.pages[i].extract_text()
-            # \xa0 and a space look the same but have different encoding
-            # text = text.replace(u'\xa0', u' ')
             # characters that look the same but have different encodings are normalized
             text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
 
@@ -60,20 +58,38 @@ class PDFHandler:
         else:
             return ["unknown_date"]
 
+    def get_date_str(self):
+        if len(self.date) > 0:
+            return self.date[0] + " " + self.date[1] + " " + self.date[2]
+        else:
+            return "unknown_date"
+
     def get_location(self):
         if len(self.location) > 0:
             return self.location.copy()
         else:
             return ["unknown_location"]
 
+    def get_location_str(self):
+        if len(self.location) > 0:
+            return self.location[0]
+        else:
+            return "unknown_location"
+
+    def get_title(self):
+        return self.title
+
+    def get_nb_pages(self):
+        return len(self.pdf.pages)
+
     @staticmethod
-    def multiple_speakers(text):
+    def multiple_speakers(text, keys):
         pat = re.compile(r"[a-z0-9]+\s*:", re.I)
         all_speakers = pat.findall(text)
-        all_speakers = [s.lower() for s in all_speakers]
-        print('"Obama:" count:', all_speakers.count('obama:'))
-        print('"President:" count:', all_speakers.count('president:'))
-        print('"Question:" count:', all_speakers.count('question:'))
-        print('"Audience:" count:', all_speakers.count('audience:'))
-        print('"Member:" count:', all_speakers.count('member:'))
-        return all_speakers
+        all_speakers = [s.lower().replace(" ", "") for s in all_speakers]
+
+        counts = dict.fromkeys(keys)
+        for s in counts.keys():
+            counts[s] = all_speakers.count(s.lower().replace(" ", ""))
+
+        return counts, all_speakers
