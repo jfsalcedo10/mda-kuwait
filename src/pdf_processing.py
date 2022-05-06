@@ -1,5 +1,6 @@
 import pdfplumber
 import re
+import regex
 import unicodedata
 
 
@@ -55,11 +56,11 @@ class PDFHandler:
         for i in range(len(self.pdf.pages)):
             text = self.pdf.pages[i].extract_text()
             # before normalizing
-            self.match_replace(text, [r'[’‘]'], [r"'"])
+            text = self.match_replace(text, [r"['’‘`´]"], [r"'"])
             # characters that look the same but have different encodings are normalized
             text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
 
-            search = re.search(pat, text)
+            search = regex.search(pat, text)
 
             if i == 0:
                 day = search.group("day")
