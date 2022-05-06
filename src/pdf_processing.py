@@ -10,47 +10,11 @@ class PDFHandler:
         self.location = []
         self.title = filepath.parts[-1].split(".")[0]
 
-    def print_info(self):
-        print('Title:', self.get_title())
-        print("Number of pages:", self.get_nb_pages())
-        print("Date:", self.get_date_str())
-        print("Location:", self.get_location_str())
+    def get_title(self):
+        return self.title
 
-    def original_page(self, page_number):
-        return self.pdf.pages[page_number].extract_text()
-
-    def extract_speech(self, pat):
-        full_text = ""
-
-        for i in range(len(self.pdf.pages)):
-            text = self.pdf.pages[i].extract_text()
-            # characters that look the same but have different encodings are normalized
-            text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
-
-            search = re.search(pat, text)
-
-            if i == 0:
-                day = search.group("day")
-                mon = search.group("mon")
-                year = search.group("year")
-                loc = search.group("location")
-
-                if day is not None and mon is not None and year is not None:
-                    self.date = [day.strip(), mon.strip(), year.strip()]
-
-                if loc is not None:
-                    self.location = [loc.strip()]
-
-            full_text += search.group("content") + " "
-
-        return full_text.strip()
-
-    @staticmethod
-    def replace(text, old, new):
-        for i in range(len(old)):
-            pat = re.compile(old[i])
-            text = pat.sub(new[i], text)
-        return text
+    def get_nb_pages(self):
+        return len(self.pdf.pages)
 
     def get_date(self):
         if len(self.date) > 0:
@@ -76,11 +40,72 @@ class PDFHandler:
         else:
             return "unknown_location"
 
-    def get_title(self):
-        return self.title
+    def print_info(self):
+        print('Title:', self.get_title())
+        print("Number of pages:", self.get_nb_pages())
+        print("Date:", self.get_date_str())
+        print("Location:", self.get_location_str())
 
-    def get_nb_pages(self):
-        return len(self.pdf.pages)
+    def original_page(self, page_number):
+        return self.pdf.pages[page_number].extract_text()
+
+    def extract_speech(self, pat):
+        full_text = ""
+
+        for i in range(len(self.pdf.pages)):
+            text = self.pdf.pages[i].extract_text()
+            # before normalizing
+            self.match_replace(text, [r'[’‘]'], [r"'"])
+            # characters that look the same but have different encodings are normalized
+            text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
+
+            search = re.search(pat, text)
+
+            if i == 0:
+                day = search.group("day")
+                mon = search.group("mon")
+                year = search.group("year")
+                loc = search.group("location")
+
+                if day is not None and mon is not None and year is not None:
+                    self.date = [day.strip(), mon.strip(), year.strip()]
+
+                if loc is not None:
+                    self.location = [loc.strip()]
+
+            full_text += search.group("content") + " "
+
+        return full_text.strip()
+
+    def full_extract(self, pat, count, rep_old, rep_new, re_old, re_new):
+        speech = self.extract_speech(pat)
+
+        counts, speakers = self.multiple_speakers(speech, count)
+
+        clean_speech = self.substring_replace(speech, rep_old, rep_new)
+        clean_speech = self.match_replace(clean_speech, re_old, re_new)
+
+        title = self.get_title()
+        nb_pages = self.get_nb_pages()
+        date = self.get_date_str()
+        loc = self.get_location_str()
+        highest_count = max(counts.values())
+
+        return title, nb_pages, date, loc, highest_count, clean_speech
+
+    @staticmethod
+    def match_replace(text, old, new):
+        for i in range(len(old)):
+            pat = re.compile(old[i])
+            text = pat.sub(new[i], text)
+        return text
+
+    @staticmethod
+    def substring_replace(text, old, new):
+        clean_text = text
+        for i in range(len(old)):
+            clean_text = clean_text.replace(old[i], new[i])
+        return clean_text
 
     @staticmethod
     def multiple_speakers(text, keys):
