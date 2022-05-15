@@ -6,7 +6,7 @@ import unicodedata
 
 class PDFHandler:
     """
-    A class used for extracting the text and additional information out of a pdf file
+    A class used for extracting the text and additional information out of a pdf file.
 
     The pdf is assumed to be a speech of Barack Obama, retrieved from
     https://www.americanrhetoric.com/barackobamaspeeches.htm
@@ -14,41 +14,42 @@ class PDFHandler:
     Attributes
     ----------
     pdf : instance of the pdfplumber.PDF class
-        the pdf file to process
+        The pdf file to process
     title : str
-        the title of the pdf file
+        The title of the pdf file
     date : str
-        the date on which the speech took place
+        The date on which the speech took place
     location : str
-        the location where the speech took place
+        The location where the speech took place
 
     Methods
     -------
     __init__(self, filepath)
-        The constructor of the PDFHandler class
+        The constructor of the PDFHandler class.
     get_title(self)
-        Returns the title of the pdf
+        Returns the title of the pdf.
     get_nb_pages(self)
-        Return the number of pages
+        Returns the number of pages.
     get_date(self)
-        Return the date
+        Returns the date.
     get_location(self)
-        Returns the location
+        Returns the location.
     print_info(self)
-        Prints the title, number of pages, date, and location
+        Prints the title, number of pages, date, and location.
     original_page(self, pagenumber)
-        Returns the text extracted from the given page number before processing
+        Extracts the text from the given page number, without any additional processing.
     extract_speech(self, pat)
-        Return the contents of the entire speech, with the contents as defined by the given pattern
+        Extracts the contents of the entire speech, with the contents as defined by the given pattern.
     full_extract(self, pat, count, rep_old, rep_new, re_old, re_new)
-        Returns a tuple containing all the information of the entire speech, ready to be read into a database
+        Extracts all information on the speech as a tuple, so it can easily be written into a new file as a row.
+    close_file(self)
+        Closes the pdf file.
     match_replace(text, old_arr, new_arr)
-        Returns the given text for which regular expression patterns have been replaced by the given strings
+        Replaces the regular expression patterns by the corresponding strings in the given text.
     substring_replace(text, old_arr, new_arr)
-        Returns the given text for which substrings have been replaced by the corresponding strings
+        Replaces the substrings by the corresponding strings in the given text.
     multiple_speakers(text, keys)
-        Returns a list of all occurrences of a word followed by a ":" in the text and counts the occurrences in that
-        list for the given keys
+        Provides an indicator of whether there were multiple speakers during the speech.
     """
 
     date = ""
@@ -56,7 +57,7 @@ class PDFHandler:
 
     def __init__(self, filepath):
         """
-        Creates a PDFHandler object
+        Creates a PDFHandler object.
 
         :param filepath: Filepath of the pdf to process
         :type filepath: pathlib.Path instance
@@ -67,7 +68,7 @@ class PDFHandler:
 
     def get_title(self):
         """
-        Get the title of the pdf
+        Get the title of the pdf.
 
         :return: Title of the pdf
         :rtype: string
@@ -76,7 +77,7 @@ class PDFHandler:
 
     def get_nb_pages(self):
         """
-        Get the number of pages of the pdf
+        Get the number of pages of the pdf.
 
         :return: Number of pages of the pdf
         :rtype: integer
@@ -85,9 +86,9 @@ class PDFHandler:
 
     def get_date(self):
         """
-        Get the date at which the speech took place
+        Get the date at which the speech took place.
 
-        :return: The date
+        :return: The date of the speech
         :rtype: string
         """
         # if no date was present, the date attribute is an empty string
@@ -98,9 +99,9 @@ class PDFHandler:
 
     def get_location(self):
         """
-        Get the location at which the speech took place
+        Get the location at which the speech took place.
 
-        :return: The location
+        :return: The location of the speech
         :rtype: string
         """
         # if no location was present, the location attribute is an empty string
@@ -111,7 +112,7 @@ class PDFHandler:
 
     def print_info(self):
         """
-        Prints the title of the pdf, number of pages, date, and location
+        Prints the title of the pdf, number of pages, date, and location.
         """
         print('Title:', self.get_title())
         print("Number of pages:", self.get_nb_pages())
@@ -120,7 +121,7 @@ class PDFHandler:
 
     def original_page(self, page_number):
         """
-        Extracts the text from a page of the pdf, without any additional processing
+        Extracts the text from a page of the pdf, without any additional processing.
 
         :param page_number: The page number of the text to extract
         :type page_number: integer
@@ -228,6 +229,15 @@ class PDFHandler:
 
         return title, nb_pages, date, loc, highest_count, clean_speech
 
+    def close_file(self):
+        """
+        Closes the pdf file.
+
+        Closes the instance of the pdfplumber.PDF class that represents the pdf attribute. This is recommended when
+        working with large pdf files to save memory.
+        """
+        self.pdf.close()
+
     @staticmethod
     def match_replace(text, old_arr, new_arr):
         """
@@ -281,7 +291,8 @@ class PDFHandler:
 
         :param text: The text to process
         :type text: string
-        :param keys: Strings that indicate the presence of multiple speakers (not case sensitive)
+        :param keys: Strings that indicate the presence of multiple speakers (not case sensitive), including a ":" at
+        the end
         :type keys: tuple of strings
 
         :return: A list of all occurrences of the ":" character preceded by a combination of numbers and letters, and
