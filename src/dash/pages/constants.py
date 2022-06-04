@@ -1,22 +1,17 @@
-header_height, footer_height = "6rem", "10rem"
+header_height, footer_height = "6rem", "3.5rem"
 sidebar_width, adbar_width = "12rem", "12rem"
 
 TITLE_STYLE = {
-    'text-align': 'center'
+    'textAlign': 'center'
 }
 
 PARAGRAPH_STYLE = {
-    'text-align': 'justify'   
+    'textAlign': 'justify'   
 }
 
-HEADER_STYLE = {
-    "position": "fixed",
-    "top": 0,
-    "left": 0,
-    "right": 0,
-    "height": header_height,
-    "padding": "2rem 1rem",
-    "background-color": "white",
+MENU_ITEM_STYLE = {
+    'textDecoration': 'none',
+    'size': '20'
 }
 
 SIDEBAR_STYLE = {
@@ -29,30 +24,26 @@ SIDEBAR_STYLE = {
     "background-color": "lightgreen",
 }
 
-ADBAR_STYLE = {
-    "position": "fixed",
-    "top": header_height,
-    "right": 0,
-    "bottom": footer_height,
-    "width": adbar_width,
-    "padding": "1rem 1rem",
-    "background-color": "lightblue",
+FOOTER_STYLE = {
+    "position": "absolute",
+    "display": "flex",
+    "justifyContent": "spaceBetween",
+    "alignItems": "center",
+    "bottom": "0",
+    "width": "100%",
+    "height": footer_height,
+    "color": "white",
+    "backgroundColor": "var(--bs-secondary)",
 }
 
-FOOTER_STYLE = {
-    "position": "fixed",
-    "bottom": 0,
-    "left": 0,
-    "right": 0,
-    "height": footer_height,
-    "padding": "1rem 1rem",
-    "background-color": "gray",
+
+IMG_STYLE = {
+    'display': 'block',
+    'margin-left': 'auto',
+    'margin-right': 'auto',
+    'width': '60%',
 }
 
 CONTENT_STYLE = {
-    "margin-top": header_height,
-    "margin-left": sidebar_width,
-    "margin-right": adbar_width,
-    "margin-bottom": footer_height,
-    "padding": "1rem 1rem",
+    "paddingBottom": footer_height,
 }

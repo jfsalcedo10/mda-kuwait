@@ -1,6 +1,22 @@
 from dash import dcc,html, Input, Output, callback
 import dash_bootstrap_components as dbc
 from pages.constants import TITLE_STYLE, PARAGRAPH_STYLE
+
+accordion = dbc.Accordion(
+        [
+            dbc.AccordionItem(
+                "This is the content of the first section", title="Item 1"
+            ),
+            dbc.AccordionItem(
+                "This is the content of the second section", title="Item 2"
+            ),
+            dbc.AccordionItem(
+                "This is the content of the third section", title="Item 3"
+            ),
+        ],
+        start_collapsed=True,
+    )
+
 body = dbc.Container([
     # Title page
     dbc.Row(
@@ -13,36 +29,13 @@ body = dbc.Container([
     # Image of obama,
     dbc.Row(
         [
-            html.Img(
-                src='assets/bobama-front.jpg',
-            
-            ),
+            accordion
         ],
         align='center'
     ),
-    # Contains
-    dbc.Row(
-        [
-            html.P('''
-            Barack Obama was the U.S President for two twerms: 2008-2012 and re-elected on 2012-2016.
-            During his administration, the mandatary gave many speeches regarding the country situation
-            and whatnot. Also, [INSERT HERE GLOBAL TOPICS]. This app then collects the findings from the
-            Kuwait group for his speeches, by using NLP techniques on Python and Neo4j. 
-            ''',
-            style= PARAGRAPH_STYLE)
-        ],
-        justify='center',
-        align='center',
-    ),
-    dbc.Row(
-        [
-            html.H1('Obama''s rise and fall: a text analysis of his speeches')
-        ],
-        justify='center',
-        align='center',
-        class_name='h-50'
-    ),
-], style={'height': '100vh'})
+],
+style={'height': '100%'}
+)
 
 layout = html.Div([
     body
