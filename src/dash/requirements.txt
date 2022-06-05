@@ -91,15 +91,12 @@ pyproj @ file:///C:/ci/pyproj_1614278136705/work
 pyrsistent @ file:///C:/ci/pyrsistent_1636093225342/work
 PySocks @ file:///C:/ci/pysocks_1605307512533/work
 python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
-pytz==2021.3
-pywin32==302
+
 pywinpty @ file:///C:/ci_310/pywinpty_1644230983541/work/target/wheels/pywinpty-2.0.2-cp39-none-win_amd64.whl
 PyYAML==6.0
 pyzmq @ file:///C:/ci/pyzmq_1638435148211/work
 regex @ file:///C:/ci/regex_1648447888413/work
 requests @ file:///opt/conda/conda-bld/requests_1641824580448/work
-Rtree @ file:///C:/ci/rtree_1618421015405/work
-scikit-learn @ file:///C:/ci/scikit-learn_1642617276183/work
 scipy @ file:///C:/ci/scipy_1641555170412/work
 Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
 Shapely==1.7.1
