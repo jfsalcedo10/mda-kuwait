@@ -7,4 +7,9 @@ dependencies:
   - pandas
   - scikit-learn
   - nltk
+  - dash
+  - dash-bootstrap-components
+  - dash-labs
+  - autopep8
+  - geopandas
 prefix: C:\Users\juans\anaconda3\envs\mda_2022
