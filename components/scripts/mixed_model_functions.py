@@ -59,3 +59,43 @@ def get_rating(date, ratings, which):
         r = ratings.loc[ratings['date'] == closest_date, which].values[0]
 
     return r
+
+
+def get_results_speech(pred_speech, eb, df_o, df_s):
+    # predicted sentiment
+    df_pred_speech = pred_speech.loc[:, pred_speech.columns != 'title'].merge(df_o, on='id', how='left')
+    df_fitted_speech = df_pred_speech[['topic', 'id', 'title', 'Pred']].drop_duplicates()
+
+    # EB estimates
+    df_eb_speech = eb.loc[(eb.id != '_') & (eb.topic != '_')].copy()
+    df_eb_speech = df_eb_speech[['id', 'Estimate']]
+    df_eb_speech['id'] = df_eb_speech['id'].astype('int64')
+
+    df_fitted_speech = df_fitted_speech.merge(df_eb_speech, on='id', how='left', validate='many_to_one')
+
+    # additional info
+    df_fitted_speech = df_fitted_speech.merge(df_s[['title', 'date', 'country', 'state', 'city']], on='title',
+                                              how='left')
+
+    return df_fitted_speech
+
+
+def get_results_topic(eb):
+    df_fitted_topic = eb.loc[(eb.id == '_') & (eb.topic != '_')].copy()
+    df_fitted_topic['topic'] = df_fitted_topic['topic'].astype('int64') + 1
+    df_fitted_topic = df_fitted_topic[['topic', 'Estimate']]
+    return df_fitted_topic
+
+
+def all_eb_estimates(df_fitted_speech, df_fitted_topic):
+    # EB estimates of the speeches
+    eb_speech = df_fitted_speech[['topic', 'id', 'title', 'Estimate']].copy()
+    eb_speech.columns = ['topic', 'id', 'title', 'Estimate_speech']
+    eb_speech['topic'] = eb_speech['topic'] + 1
+
+    # EB estimates of the topics
+    eb_topic = df_fitted_topic[['topic', 'Estimate']]
+    eb_topic.columns = ['topic', 'Estimate_topic']
+
+    eb = eb_speech.merge(eb_topic, on='topic', how='left', validate='many_to_one')
+    return eb
