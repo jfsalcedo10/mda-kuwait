@@ -1,5 +1,5 @@
 import dash
-from dash import dcc, Output, Input, State
+from dash import dcc, Output, Input, State, callback
 import dash.html as html
 import dash_bootstrap_components as dbc
 from pages.constants import CONTENT_STYLE, FOOTER_STYLE, MENU_ITEM_STYLE
@@ -11,7 +11,9 @@ OBAMA_LOGO = "https://img.icons8.com/color/452/barack-obama.png"
 linkedInURL = OBAMA_LOGO
 facebookURL = OBAMA_LOGO
 app = dash.Dash(
-    __name__, title='Obama\'s speeches - Kuwait group',
+    __name__, 
+    suppress_callback_exceptions= True,
+    title='Obama\'s speeches - Kuwait group',
     external_stylesheets=[
         dbc.themes.FLATLY,
         dbc.icons.BOOTSTRAP
@@ -83,13 +85,12 @@ navbar = dbc.Navbar(
 footer = html.Footer(
     [
         html.Div("Modern Data Analytics 2022 - KU Leuven", id='footer-text'),
-
         html.Div([
-            html.P([' Github:'], id='find-me-on')
-            # html.A([html.Img(src=app.get_asset_url('linkedInLogo.png'), style={'height': '2rem'})],
-            #    href=linkedInURL),
-            # html.A([html.Img(src=app.get_asset_url('facebookLogo.png'), style={'height': '2rem'})],
-            #    href=facebookURL)
+            html.P([' Github:'], id='find-me-on'),
+            html.A([html.Img(src=app.get_asset_url('favicon.ico'), style={'height': '2rem'})],
+               href=linkedInURL),
+            html.A([html.Img(src=app.get_asset_url('favicon.ico'), style={'height': '2rem'})],
+               href=facebookURL)
         ], id='footer-links',
         ),
     ],
@@ -116,7 +117,7 @@ app.layout = html.Div(
 )
 
 
-@app.callback(
+@callback(
     Output('page-content', 'children'),
     Output('offcanvas', 'is_open'),
     Input('url', 'pathname'),
@@ -135,7 +136,7 @@ def handle_page(pathname, n_clicks, is_open):
     elif pathname == '/topic-classification':
         if n_clicks:
             return topic_classification.layout, not is_open
-        return topic_classification.layout
+        return topic_classification.layout, is_open
     elif pathname == '/conclusions':
         if n_clicks:
             return conclusions.layout, not is_open

@@ -7,7 +7,7 @@ body = dbc.Container([
     dbc.Row(
         [
             html.H1(
-                'Final remarks', style=TITLE_STYLE)
+                'Conclusions', style=TITLE_STYLE)
         ],
         justify='center',
         align='center',

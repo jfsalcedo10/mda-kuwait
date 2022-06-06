@@ -2,6 +2,18 @@ from dash import dcc, Input, Output, callback
 import dash.html as html
 import dash_bootstrap_components as dbc
 from pages.constants import TITLE_STYLE, PARAGRAPH_STYLE, IMG_STYLE
+
+import plotly.express as px
+
+df = px.data.iris()  # iris is a pandas DataFrame
+fig = px.scatter(df, x="sepal_width", y="sepal_length")
+
+
+item_1 = [
+    "This is the content of the first section",
+    dcc.Graph(figure=fig)
+]
+
 body = dbc.Container([
     # Title page
     dbc.Row(
@@ -43,12 +55,46 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            html.H2('Speech location')
+            html.H2('Speeches location')
         ],
         justify='center',
         align='center',
-        class_name='h-50'
     ),
+    dbc.Row(
+        [
+            dcc.Graph(figure= fig)
+        ],
+        justify='center',
+        align='center',
+    ),
+    dbc.Row(
+        [
+            html.H2('Obama\'s popularity')
+        ],
+        justify='center',
+        align='center',
+    ),
+    dbc.Row(
+        [
+            dcc.Graph(figure= fig)
+        ],
+        justify='center',
+        align='center',
+    ),
+    dbc.Row(
+        [
+            html.H2('Study objectives')
+        ],
+        justify='center',
+        align='center',
+    ),
+    dbc.Row(
+        [
+            'Here go the objectives'
+        ],
+        justify='center',
+        align='center',
+    )
 ], style={'height': '100%'})
 
 layout = html.Div([
