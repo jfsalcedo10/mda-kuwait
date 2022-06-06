@@ -102,4 +102,29 @@ run;
 *RUN;
 
 
+*PROC EXPORT DATA=re_estimates_pfin
+*            OUTFILE="&path/data/empiral_bayes_estimates_pfin.txt"
+*            DBMS=CSV REPLACE;
+*     PUTNAMES=YES;
+*RUN;
+
+*PROC EXPORT DATA=data.pred_pfin
+*            OUTFILE="&path/data/predicted_sentiment_pfin.txt"
+*            DBMS=CSV REPLACE;
+*     PUTNAMES=YES;
+*RUN;
+
+
+*PROC EXPORT DATA=re_estimates_jobs
+*            OUTFILE="&path/data/empiral_bayes_estimates_jobs.txt"
+*            DBMS=CSV REPLACE;
+*     PUTNAMES=YES;
+*RUN;
+
+*PROC EXPORT DATA=data.pred_jobs
+*            OUTFILE="&path/data/predicted_sentiment_jobs.txt"
+*            DBMS=CSV REPLACE;
+*     PUTNAMES=YES;
+*RUN;
+
 

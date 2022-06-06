@@ -85,9 +85,16 @@ run;
 
 proc mixed data=data.pfin PLOTS(MAXPOINTS=NONE);
 	class id topic;
-	model sentiment = ratio / solution;
-	random intercept / subject=topic;
-	random intercept / subject=id(topic);
+	model sentiment = ratio / solution outp=pred_pfin;
+	random intercept / subject=topic solution;
+	random intercept / subject=id(topic) solution;
+	ods exclude solutionr;
+	ods output solutionr=re_estimates_pfin;
+run;
+
+/* get the fitted values per speech */
+data data.pred_pfin;
+	set pred_pfin;
 run;
 
 
@@ -108,8 +115,16 @@ run;
 
 proc mixed data=data.jobs PLOTS(MAXPOINTS=NONE);
 	class id topic;
-	model sentiment = ratio / solution;
-	random intercept / subject=topic;
-	random intercept / subject=id(topic);
+	model sentiment = ratio / solution outp=pred_jobs;
+	random intercept / subject=topic solution;
+	random intercept / subject=id(topic) solution;
+	ods exclude solutionr;
+	ods output solutionr=re_estimates_jobs;
 run;
+
+/* get the fitted values per speech */
+data data.pred_jobs;
+	set pred_jobs;
+run;
+
 
