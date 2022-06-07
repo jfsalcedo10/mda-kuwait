@@ -2,12 +2,17 @@ from dash import dcc, Input, Output, callback
 import dash.html as html
 import dash_bootstrap_components as dbc
 from pages.constants import TITLE_STYLE, PARAGRAPH_STYLE, IMG_STYLE
-
+from pages.sentiment import sentiment_plotter
 import plotly.express as px
+
+from utils.utils import UtilsCRUD
+
+# sentiment_plotter = SentimentCRUD()
 
 df = px.data.iris()  # iris is a pandas DataFrame
 fig = px.scatter(df, x="sepal_width", y="sepal_length")
 
+utils_crud = UtilsCRUD()
 
 item_1 = [
     "This is the content of the first section",
@@ -62,7 +67,7 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            dcc.Graph(figure= fig)
+            dcc.Graph(figure= sentiment_plotter.plot_sentiment_location(stanza=False, color='country'))
         ],
         justify='center',
         align='center',
@@ -76,7 +81,7 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            dcc.Graph(figure= fig)
+            dcc.Graph(figure= utils_crud.plot_popularity())
         ],
         justify='center',
         align='center',

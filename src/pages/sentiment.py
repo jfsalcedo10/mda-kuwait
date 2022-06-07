@@ -10,13 +10,18 @@ acc_sentiment_time = [
     dcc.Graph(figure= sentiment_plotter.plot_sentiment_over_time())
 ]
 
+acc_sentiment_location = [
+    html.P('Sentiment and location'),
+    dcc.Graph(figure= sentiment_plotter.plot_sentiment_location())
+]
+
 accordion = dbc.Accordion(
         [
             dbc.AccordionItem(
                 acc_sentiment_time, title="Sentiment over time"
             ),
             dbc.AccordionItem(
-                "This is the content of the second section", title="Sentiment per location"
+                acc_sentiment_location, title="Sentiment per location"
             ),
             dbc.AccordionItem(
                 "This is the content of the third section", title="Popularity tracker"
