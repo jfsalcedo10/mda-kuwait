@@ -3,26 +3,9 @@ import dash_bootstrap_components as dbc
 from pages.constants import TITLE_STYLE, PARAGRAPH_STYLE
 from utils.topic_crud import TopicCRUD
 
-import plotly.express as px
-
-df = px.data.iris()  # iris is a pandas DataFrame
-fig = px.scatter(df, x="sepal_width", y="sepal_length")
-
 topic_plotter = TopicCRUD()
 
-item_1 = [
-    "This is the content of the first section",
-    dcc.Graph(figure=fig)
-]
-
 topic_2_accordion = [
-    'This is the topics for the accordion',
-    html.Div([
-        dcc.Slider(min=1, max=25, step=1,
-                   id='second-topic-slider',
-                   value=10,
-                   tooltip={"placement": "bottom", "always_visible": True}
-                   )]),
     dcc.Graph(id='second-topic-figure')
 ]
 
@@ -52,8 +35,18 @@ topic_word_relevance = [
 ]
 
 topic_speech_topics = [
-    'This is the topics for the accordion',
-    dcc.Dropdown(),
+    'Number of topics',
+    html.Div([
+        dcc.Slider(min=1, max=10, step=1,
+                   id='speech-topic-slider',
+                   value=5,
+                   tooltip={"placement": "bottom", "always_visible": True}
+                   )]),
+    dbc.Select(
+        id='speech-select',
+        options= topic_plotter.get_speech_titles(),
+        value='Cairo_University'
+    ),
     dcc.Graph(id='topic-speeches-figure')
 ]
 
@@ -94,7 +87,7 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            dcc.Graph(figure=fig)
+            dcc.Graph(figure=topic_plotter.get_neo4j_graph())
         ],
         justify='center',
         align='center'
@@ -113,6 +106,17 @@ body = dbc.Container([
     ),
     html.Br(),
     # Image of obama,
+    dbc.Row(
+        [
+            'Select a topic to analyze:',
+            html.Div([
+                dcc.Slider(min=1, max=25, step=1,
+                        id='second-topic-slider',
+                        value=10,
+                        tooltip={"placement": "bottom", "always_visible": True}
+                        )]),
+        ]
+    ),
     dbc.Row(
         [
             accordion
@@ -160,4 +164,12 @@ def update_topic_presence(word_input):
     Input('keywords-topic-slider', 'value'))
 def update_topic_keywords(slider_value, no_keywords):
     fig = topic_plotter.get_top_tokens_per_topic(slider_value, no_keywords)
+    return fig
+
+@callback(
+    Output('topic-speeches-figure', 'figure'),
+    Input('speech-select', 'value'),
+    Input('speech-topic-slider', 'value'))
+def update_topic_speech(selected_value, no_topics):
+    fig = topic_plotter.get_speech_topics(selected_value, no_topics)
     return fig

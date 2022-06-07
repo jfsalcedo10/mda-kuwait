@@ -15,6 +15,13 @@ acc_sentiment_location = [
     dcc.Graph(figure= sentiment_plotter.plot_sentiment_location())
 ]
 
+acc_popularity_tracker = [
+    html.P('Sentiment and location'),
+    dcc.Graph(figure= sentiment_plotter.plot_sentiment_popularity_tracker()),
+    html.P('Gun deaths vs sentiment across time'),
+    dcc.Graph(figure= sentiment_plotter.plot_gun_popularity_tracker())
+]
+
 accordion = dbc.Accordion(
         [
             dbc.AccordionItem(
@@ -24,11 +31,12 @@ accordion = dbc.Accordion(
                 acc_sentiment_location, title="Sentiment per location"
             ),
             dbc.AccordionItem(
-                "This is the content of the third section", title="Popularity tracker"
+                acc_popularity_tracker, title="Popularity tracker"
             ),
         ],
         start_collapsed=True,
-        flush= True
+        flush= True,
+        always_open= True
     )
 
 body = dbc.Container([
@@ -39,6 +47,17 @@ body = dbc.Container([
         ],
         justify='center',
         align='center',
+    ),
+    dbc.Row(
+        [
+            html.P('''Sentimental analysis was carried out with three different NLP techniques: 
+            TextBlob, Stanza and Vader. A fourth one, not hosted by python packages, was also used:
+            AWS Sentimental analysis. This section represents the different scores of the three main 
+            techniques used. We also present the areas where the different speeches were pronounced as
+            well as some graphs showing the links between some external variables and the sentiments of the speeches.''',
+            style=PARAGRAPH_STYLE
+            )
+        ]
     ),
     # Image of obama,
     dbc.Row(

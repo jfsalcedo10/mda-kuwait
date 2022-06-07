@@ -2,13 +2,16 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+import networkx as nx
+from scipy.special import expit
 
 class TopicCRUD(object):
     def __init__(self):
         self.base_df = pd.read_csv('./data/topic_plots_base.csv')
-        # self.df_t = pd.read_csv('./data/topic_')
+        self.graph_df = pd.read_csv('./data/neo4j_graph_info.csv')
         self.df_p = pd.read_csv('./data/processed_speeches.txt')
         self.df_te = pd.read_csv("./data/token_embedding.txt").drop('Unnamed: 0', axis = 1)
+        self.df_t_emb = pd.read_csv("./data/topic_embedding.txt").drop('Unnamed: 0', axis = 1)
 
     def get_second_topic(self, topic_ix = 22):
         #################
@@ -63,7 +66,6 @@ class TopicCRUD(object):
         fig.update_layout(title={'text':title, 'y':0.95, 'x':0.5, 'xanchor':'center', 'yanchor': 'top'})
 
         return fig
-
 
     def get_topic_cities(self, topic_ix = 22, only_USA = False):
 
@@ -210,5 +212,91 @@ class TopicCRUD(object):
             yaxis = dict(title= 'Percentage'))
         return fig
 
-    def get_speech_topics(self):
-        pass
+    def get_speech_topics(self, speech = 'Cairo_University', nb_topics = 5):
+
+        title = f'Speech: {speech}'
+
+        # get the topic embeddings for the speech
+        series = pd.Series(self.df_t_emb.loc[self.df_t_emb.title==speech, self.df_t_emb.columns!='title'].values[0])
+        # make the topics the index
+        series.index = self.df_t_emb.loc[self.df_t_emb.title==speech, self.df_t_emb.columns!='title'].columns
+
+        topics = series.sort_values(ascending=False).index.values[:nb_topics]
+        topics = [str(int(t)+1) for t in topics]
+        values = series.sort_values(ascending=False).values[:nb_topics]
+
+        fig = px.bar(x=topics, y=values, labels={"x": "Topic","y": "Weight"})
+
+        fig.update_layout(title={'text':title, 'y':0.95, 'x':0.5, 'xanchor':'center', 'yanchor': 'top'})
+
+        return fig
+
+    def get_neo4j_graph(self):
+        G = nx.from_pandas_edgelist(self.graph_df,"Title","Topic","Relationship")
+        u = nx.spring_layout(G)
+        for i in u:
+            G.nodes[i]['pos'] = u[i]
+        
+        #setting edges for plotly
+        edge_x = []
+        edge_y = []
+        for edge in G.edges():
+            x0, y0 = G.nodes[edge[0]]['pos']
+            x1, y1 = G.nodes[edge[1]]['pos']
+            edge_x.append(x0)
+            edge_x.append(x1)
+            edge_x.append(None)
+            edge_y.append(y0)
+            edge_y.append(y1)
+            edge_y.append(None)
+        edge_trace = go.Scatter(
+            x=edge_x, y=edge_y,
+            line=dict(width=0.2, color='#888'),
+            mode='lines')
+        #setting adjacencies for plotly
+        node_adjacencies = []
+        node_text = []
+        for node, adjacencies in G.adjacency():
+            node_adjacencies.append(len(adjacencies))
+            node_text.append(str(node) +' # of connections: '+str(len(adjacencies)))
+        #setting nodes for plotly
+        node_x = []
+        node_y = []
+        node_name=[]
+        for node in G.nodes():
+            x, y = G.nodes[node]['pos']
+            node_x.append(x)
+            node_y.append(y)
+            node_name.append(node)
+        node_trace = go.Scatter(
+            x=node_x, y=node_y, mode='markers',
+        hovertext=node_text,hoverinfo='text',marker=dict(
+                showscale=True,
+                colorscale='Portland',
+                reversescale=False,
+                opacity=expit(pd.DataFrame(node_adjacencies)),
+                color=[],
+                size=np.log(pd.DataFrame(node_adjacencies))*12,
+                colorbar=dict(
+                    thickness=15,
+                    title='Node Connections',
+                    xanchor='left',
+                    titleside='right'
+                ),
+                line_width=2))
+        node_trace.marker.color = node_adjacencies
+
+        fig = go.Figure(data= [edge_trace,node_trace],layout=go.Layout(
+                title='Speeches related to their topic',
+                titlefont_size=16,
+                showlegend=False,
+                hovermode='closest',
+                margin=dict(b=20,l=5,r=5,t=40),
+                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False))
+                )
+
+        return fig
+    
+    def get_speech_titles(self):
+        return [{'label': title, 'value': title} for title in self.df_t_emb.title]
