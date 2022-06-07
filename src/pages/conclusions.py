@@ -1,4 +1,5 @@
-from dash import dcc, Input, Output, callback
+from dash import Input, Output, callback
+from dash import dcc
 import dash.html as html
 import dash_bootstrap_components as dbc
 from pages.constants import TITLE_STYLE, PARAGRAPH_STYLE, IMG_STYLE
@@ -88,11 +89,14 @@ body = dbc.Container([
             dbc.Col(
                 [
                     html.Img(
-                        src='assets/bobama-front.jpg',
+                        src='assets/obama-farewell.jpg',
                         style=IMG_STYLE
                     ),
+                    dcc.Markdown('''_President Obama Caps Long Goodbye With Farewell Speech
+Copyright: Copyright 2017 The Associated Press. All rights reserved._
+                    ''', style=TITLE_STYLE)
                 ],
-                align='center'
+                align='center',
             )
         ],
         align='center'
@@ -100,20 +104,24 @@ body = dbc.Container([
     # Contains
     dbc.Row(
         [
-            html.P('''
-            Barack Obama was the U.S President for two twerms: 2008-2012 and re-elected on 2012-2016.
-            During his administration, the mandatary gave many speeches regarding the country situation
-            and whatnot. Also, [INSERT HERE GLOBAL TOPICS]. This app then collects the findings from the
-            Kuwait group for his speeches, by using NLP techniques on Python and Neo4j. 
-            ''',
-                   style=PARAGRAPH_STYLE)
+            dcc.Markdown('''
+What are the variables of Obama\'s speeches? Our answers based on the analyses are:
+
+- Obama tends to be more negative when he talks about foreign conflict and terrorism, gun violence, the economy, immigration, and civil rights.
+- Obama tends to be more positive when he talks about elections, education, faith and family.
+- The overall mean for the sentiment is more positive (0.1).
+- All topics have a positive sentiment, the &quot;more negative&quot; topics are below the overall average, but their mean sentiment score is positive.
+- Obama&#39;s job (dis)approval tracker does not have an impact on the sentiment of his speeches. But more dynamics in the tracker coincides with his 2nd presidential term (2013-2017).
+- Gun deaths by assault has a negative effect on the sentiment of his speeches. More deaths associate with more negative sentiments in the speeches.
+- The positively improving people&#39;s perception of the financial situation and job market in the US coincides with Obama&#39;s increasingly positive speeches related to economy.
+            '''),
         ],
         justify='center',
         align='center',
     ),
-    dbc.Row(
-        accordion
-    )
+    # dbc.Row(
+    #     accordion
+    # )
 ], style={'height': '100%'})
 
 layout = html.Div([

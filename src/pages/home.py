@@ -14,11 +14,6 @@ fig = px.scatter(df, x="sepal_width", y="sepal_length")
 
 utils_crud = UtilsCRUD()
 
-item_1 = [
-    "This is the content of the first section",
-    dcc.Graph(figure=fig)
-]
-
 body = dbc.Container([
     # Title page
     dbc.Row(
@@ -44,14 +39,15 @@ body = dbc.Container([
         ],
         align='center'
     ),
+    html.Br(),
     # Contains
     dbc.Row(
         [
             html.P('''
-            Barack Obama was the U.S President for two twerms: 2008-2012 and re-elected on 2012-2016.
-            During his administration, the mandatary gave many speeches regarding the country situation
-            and whatnot. Also, [INSERT HERE GLOBAL TOPICS]. This app then collects the findings from the
-            Kuwait group for his speeches, by using NLP techniques on Python and Neo4j. 
+            Barack Obama won the US presidency in November 2008 and November 2012 and was in office from 2009 to 2017. 
+            Team Kuwait explore Obama's speeches during his presidential terms and election periods to find the variables that explain his speeches. 
+            For this, we mainly focus on the topic and sentiment parts of the speeches and see the variables for these two aspects. 
+            This app collects the findings from our analysis using NLP techniques on Python and Neo4j as well as some statistical tools such as mixed models. 
             ''',
                    style=PARAGRAPH_STYLE)
         ],
@@ -67,7 +63,8 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            dcc.Graph(figure= sentiment_plotter.plot_sentiment_location(stanza=False, color='country'))
+            dcc.Graph(figure=sentiment_plotter.plot_sentiment_location(
+                stanza=False, color='country'))
         ],
         justify='center',
         align='center',
@@ -81,7 +78,7 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            dcc.Graph(figure= utils_crud.plot_popularity())
+            dcc.Graph(figure=utils_crud.plot_popularity())
         ],
         justify='center',
         align='center',
@@ -95,7 +92,23 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            'Here go the objectives'
+            dcc.Markdown('''
+
+**Research Theme: What are the variables affecting Obama's speeches?**
+
+With this research theme, our study aims to answer the following research questions regarding Obama's speeches delivered during his mandate.
+
+1.  What are the topics and sentiments of the speeches?
+
+2.  What affects the topics and the sentiments of the speeches?
+
+    -   Location, Time, Obama's popularity, Gun Deaths, Financial and Job market Situation
+
+
+3.  What is the relation between sentiment & topic for the speeches?
+
+'''
+                   )
         ],
         justify='center',
         align='center',

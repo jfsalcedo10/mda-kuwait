@@ -5,8 +5,23 @@ from utils.sentiment_crud import SentimentCRUD
 
 sentiment_plotter = SentimentCRUD()
 
+markdown_sent_time = dcc.Markdown('''
+-   The Stanza values are rescaled to fluctuate between -1 and 1. As Stanza yields sentence-wise sentiment scores which are integers of 0 (negative), 1 (neutral) or 2 (positive), an average of the sentence-wise scores was produced for each speech. To match with other sentiment scores, we subtract 1 from the score.
+
+    -   \$\\frac{\\sum\_{i}\^{n} s\_{ji}}{n}-1\$ where n is the number of sentences, j is the index of the speech.
+
+-   Weighted = Subjectivity \* Vader
+
+    -   Subjectivity values come from TextBlob. 0 stands for objective and >0 expresses the degree of subjectivity.
+
+''')
+
+markdown_popularity_tracker = dcc.Markdown('''
+Obama's job (dis)approval trackers were retrieved from <https://injuryfacts.nsc.org/home-and-community/safety-topics/guns/data-details/>.
+''')
+
 acc_sentiment_time = [
-    html.P('Sentiment over time'),
+    markdown_sent_time,
     dcc.Graph(figure= sentiment_plotter.plot_sentiment_over_time())
 ]
 
@@ -16,9 +31,8 @@ acc_sentiment_location = [
 ]
 
 acc_popularity_tracker = [
-    html.P('Sentiment and location'),
+    markdown_popularity_tracker,
     dcc.Graph(figure= sentiment_plotter.plot_sentiment_popularity_tracker()),
-    html.P('Gun deaths vs sentiment across time'),
     dcc.Graph(figure= sentiment_plotter.plot_gun_popularity_tracker())
 ]
 

@@ -5,16 +5,27 @@ from utils.topic_crud import TopicCRUD
 
 topic_plotter = TopicCRUD()
 
+markdown_initial = dcc.Markdown('''
+One of the goals of this analysis is performing topic classification over Obama's speeches to identify which were the most relevant topics during his presidential term, by applying different unsupervised techniques for text classification.
+
+The results displayed below correspond to the topic modelling performed using NMF (Non-Negative Matrix Factorization) based on word-topic probabilities and document-topic probabilities.
+
+''')
+
+
 topic_2_accordion = [
+    'Given a specific topic, the following visualization plots the distribution of the second main topic throughout the documents.',
     dcc.Graph(id='second-topic-figure')
 ]
 
 topics_by_city_accordion = [
-    'This is the topics for the accordion',
+    'Distribution of the cities and locations where the selected topic took place.',
     dcc.Graph(id='topic-cities-figure')
 ]
 
 topic_keywords_accordion = [
+    'In the following visualization we can observe the top 10, 15 or 20 key words for the chosen topic, their corresponding proportion within the topic and across all the documents.',
+    html.Br(),
     'Number of keywords',
     html.Div([
         dcc.Slider(min=5, max=25, step=5,
@@ -26,7 +37,7 @@ topic_keywords_accordion = [
 ]
 
 topic_word_relevance = [
-    'This is the topics for the accordion',
+    f'''For a given word, the following visualization shows the relevance of it across different topics based on the score provided by the algorithm. Some words that were removed during the data pre-processing stage won't appear as they were present in almost all speeches and they were not relevant for topic discrimination, i.e. "America", "great", "world".''',
     dbc.Input(
         placeholder='Write a word (i.e. \'gun\')',
         id='word-presence-input',
@@ -94,12 +105,7 @@ body = dbc.Container([
     ),
     dbc.Row(
         [
-            html.P([
-                '''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'''
-            ]),
+            markdown_initial,
         ],
         justify='center',
         align='center'

@@ -85,14 +85,14 @@ navbar = dbc.Navbar(
 footer = html.Footer(
     [
         html.Div("Modern Data Analytics 2022 - KU Leuven", id='footer-text'),
-        html.Div([
-            html.P([' Github:'], id='find-me-on'),
-            html.A([html.Img(src=app.get_asset_url('favicon.ico'), style={'height': '2rem'})],
-               href=linkedInURL),
-            html.A([html.Img(src=app.get_asset_url('favicon.ico'), style={'height': '2rem'})],
-               href=facebookURL)
-        ], id='footer-links',
-        ),
+        # html.Div([
+        #     html.P([' Github:'], id='find-me-on'),
+        #     html.A([html.Img(src=app.get_asset_url('favicon.ico'), style={'height': '2rem'})],
+        #        href=linkedInURL),
+        #     html.A([html.Img(src=app.get_asset_url('favicon.ico'), style={'height': '2rem'})],
+        #        href=facebookURL)
+        # ], id='footer-links',
+        # ),
     ],
     style=FOOTER_STYLE
 )
