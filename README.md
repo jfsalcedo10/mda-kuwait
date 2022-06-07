@@ -84,15 +84,17 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-All files related to the analysis are stored in the [components](https://github.com/jfsalcedo10/mda-kuwait/components) folder. The folder contains the following subfolders:
+All files related to the analysis are stored in the [components](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components) folder. The folder contains the following subfolders:
 
-[data](https://github.com/jfsalcedo10/mda-kuwait/components/data): all the data used in the notebooks
+[data](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/data): all the data used in the notebooks
 
-[notebooks](https://github.com/jfsalcedo10/mda-kuwait/components/notebooks): jupyter notebooks containing the analysis
+[notebooks](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/notebooks): jupyter notebooks containing the analysis
 
-[pdfs](https://github.com/jfsalcedo10/mda-kuwait/components/pdfs): some example PDFs of the speeches, the code to get all PDF files is given in the `Download_PDFs.ipynb` notebook
+[pdfs](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/pdfs): some example PDFs of the speeches, the code to get all PDF files is given in the `Download_PDFs.ipynb` notebook
 
-[scripts](https://github.com/jfsalcedo10/mda-kuwait/components/scripts): additional python scripts containing classes and functions used in the notebooks. This folder also contains two SAS programs, the output of which was used in the `Sentiment_Mixed_Model_SAS_Output.ipynb` notebook. The `Sentiment_Mixed_Model.ipynb` notebook contains an equivalent analysis in python.
+[scripts](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/scripts): additional python scripts containing classes and functions used in the notebooks. This folder also contains two SAS programs, the output of which was used in the `Sentiment_Mixed_Model_SAS_Output.ipynb` notebook. The `Sentiment_Mixed_Model.ipynb` notebook contains an equivalent analysis in python.
+
+The url for the webapp related to this project is https://mda-kuwait-project.herokuapp.com.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
