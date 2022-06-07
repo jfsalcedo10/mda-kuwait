@@ -1,0 +1,26 @@
+number,top_10_words,names
+0,"['black', 'march', 'african', 'white', 'generation', 'justice', 'lincoln', 'story', 'civil', 'voting']",civil_rights
+1,"['tax', 'deficit', 'cut', 'job', 'spending', 'pay', 'business', 'economy', 'debt', 'tax cut']",economy--taxes--jobs
+2,"['iran', 'nuclear', 'iranian', 'deal', 'nuclear weapon', 'weapon', 'sanction', 'program', 'nuclear program', 'iran nuclear']",iran--nuclear_weapons
+3,"['isil', 'syria', 'iraq', 'terrorist', 'iraqi', 'syrian', 'fighter', 'military', 'assad', 'coalition']",iraq--syria--terrorism
+4,"['insurance', 'health', 'care', 'health care', 'health insurance', 'coverage', 'affordable', 'insurance company', 'cost', 'affordable care']",health_care
+5,"['energy', 'oil', 'clean', 'clean energy', 'climate', 'job', 'gas', 'bp', 'carbon', 'industry']",clean_energy--climate
+6,"['gun', 'background check', 'gun violence', 'background', 'check', 'violence', 'gun owner', 'newtown', 'law', 'owner']",gun_violence
+7,"['peace', 'war', 'human', 'nuclear', 'democracy', 'europe', 'africa', 'freedom', 'conflict', 'power']",memorial--war--peace--freedom--democracy
+8,"['iraq', 'afghanistan', 'afghan', 'war', 'troop', 'military', 'iraqi', 'al', 'qaeda', 'al qaeda']",iraq--afghanistan--war
+9,"['intelligence', 'terrorist', 'security', 'review', 'attack', 'homeland security', 'homeland', 'al qaeda', 'qaeda', 'information']",homeland_security--terrorism
+10,"['court', 'supreme court', 'supreme', 'justice', 'law', 'judge', 'merrick', 'legal', 'garland', 'stevens']",supreme_court
+11,"['israel', 'palestinian', 'israeli', 'peace', 'shimon', 'jewish', 'security', 'israel security', 'arab', 'peres']",israel_palestina
+12,"['cuban', 'cuba', 'castro', 'havana', 'relation', 'embargo', 'society', 'hemisphere', 'relationship', 'civil society']",cuba
+13,"['libyan', 'libya', 'qaddafi', 'international', 'benghazi', 'coalition', 'regime', 'civilian', 'arab', 'chris']",lybia
+14,"['school', 'college', 'student', 'education', 'teacher', 'job', 'child', 'graduate', 'class', 'parent']",education
+15,"['asean', 'asia', 'region', 'china', 'vietnam', 'pacific', 'tpp', 'trade', 'asia pacific', 'philippine']",asia
+16,"['russia', 'ukraine', 'russian', 'nato', 'europe', 'estonia', 'ukrainian', 'separatist', 'baltic', 'european']",russia--ukraine
+17,"['immigration', 'immigrant', 'border', 'undocumented', 'immigration reform', 'reform', 'citizenship', 'worker', 'illegally', 'business']",immigration
+18,"['financial', 'crisis', 'economy', 'wall street', 'bank', 'economic', 'street', 'taxpayer', 'recovery', 'firm']",economy--financial_crisis--banks
+19,"['africa', 'ebola', 'west africa', 'west', 'outbreak', 'disease', 'liberia', 'health worker', 'african', 'health']",africa--ebola
+20,"['god', 'love', 'faith', 'family', 'prayer', 'child', 'father', 'grace', 'pray', 'tragedy']",faith--family
+21,"['muslim', 'islam', 'faith', 'religion', 'religious', 'mosque', 'christian', 'freedom', 'terrorist', 'palestinian']",islam
+22,"['tonight', 'hillary', 'election', 'trump', 'little', 'house', 'win', 'white house', 'campaign', 'michelle']",elections
+23,"['veteran', 'war', 'shinseki', 'ric', 'serve', 'care', 'vietnam', 'service', 'troop', 'uniform']",veterans--vietnam
+24,"['privacy', 'cyber', 'information', 'company', 'cybersecurity', 'private sector', 'sector', 'private', 'digital', 'cyber threat']",cyber--security--privacy

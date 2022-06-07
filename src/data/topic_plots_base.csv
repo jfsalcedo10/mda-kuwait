@@ -1,0 +1,437 @@
+,title,date,country,state,city,main_topic_1_index,main_topic_2_index,main_topic_3_index
+0,CGI_2013,2013-09-24,USA,New York,New York,4,1,10
+1,Prayer_Breakfast_2016,2016-02-04,USA,no_state,Washington D.C.,20,21,0
+2,Security_Team_Announcement,2008-12-01,USA,Illinois,Chicago,9,8,7
+3,Cairo_University,2009-06-04,Egypt,no_state,Cairo,21,11,7
+4,Umpqua_Community_College_Shootings,2015-10-01,USA,no_state,Washington D.C.,6,9,20
+5,White_House_Correspondent_Dinner_2013,2013-04-27,USA,no_state,Washington D.C.,22,20,14
+6,Border_Security_and_Immigration_Reform,2014-06-30,USA,no_state,Washington D.C.,17,22,18
+7,Senate_Floor_Immigration_Reform,2007-05-23,USA,no_state,Washington D.C.,17,20,9
+8,Presser_on_the_Economy_and_Debt_Limit,2011-06-29,USA,no_state,Washington D.C.,1,13,8
+9,Kennedy_Center_Honorees_2009,2009-12-06,USA,no_state,Washington D.C.,22,20,23
+10,Affordable_Care_Act_and_Domestic_Surveillance,2013-06-07,USA,California,San Jose,4,24,10
+11,Midterm_Elections_Presser_2014,2014-11-05,USA,no_state,Washington D.C.,17,22,3
+12,YSEALI_Fellows,2015-06-01,USA,no_state,Washington D.C.,15,21,14
+13,Holocaust_Days_of_Remembrance,2009-04-23,USA,no_state,Washington D.C.,20,11,7
+14,PM_Abe_of_Japan_Joint_Presser,2014-04-24,Japan,no_state,Tokyo,15,16,2
+15,UN_Copenhagen_Climate_Change,2009-12-18,Denmark,no_state,Copenhagen,5,7,9
+16,People_of_Greece,2016-11-16,Greece,no_state,Athens,7,18,15
+17,India_Speech_at_New_Delhi,2015-01-27,India,no_state,New Delhi,7,14,20
+18,Northern_Ireland_Speech,2013-06-17,Northern Ireland,no_state,Belfast,7,22,0
+19,Fixing_Immigration_Policy,2014-11-20,USA,no_state,Washington D.C.,17,14,20
+20,George_Mason_21st_Century_Economy,2009-01-08,USA,Virginia,Fairfax,18,1,14
+21,Paris_Press_Conference_2015,2015-12-01,France,no_state,Issy-les-Moulineaux,3,5,16
+22,Prayer_Breakfast_2014,2014-02-06,USA,no_state,Washington D.C.,21,20,15
+23,Gun_Violence_Presser,2012-12-19,USA,no_state,Washington D.C.,1,6,22
+24,Aurora_Tragedy,2012-07-20,USA,Florida,Fort Myers,20,22,6
+25,2004_DNC_Address,2004-07-27,USA,New York,Boston,22,20,0
+26,NW_Flight_253_Update,2009-12-29,USA,Hawaii,Kaneohe,9,24,17
+27,Barack_Obama_-_Al-Arabiya_Interview,2009-01-26,USA,no_state,Washington D.C.,21,11,2
+28,Trade_Trans_Pacific_at_Nike,2015-05-08,USA,Oregon,Beaverton,15,1,17
+29,Boston_Marathon_Bombing_First_Statement,2013-04-15,USA,no_state,Washington D.C.,9,20,22
+30,Associated_Press_Luncheon,2012-04-03,USA,no_state,Washington D.C.,1,4,10
+31,Flight_253_Terrorist_Attempt_Press_Statement,2009-12-28,USA,Hawaii,Kailua,9,2,13
+32,Final_Press_Conference,2017-01-18,USA,no_state,Washington D.C.,22,16,12
+33,Joint_Session_on_Economy_and_Jobs,2011-09-08,USA,no_state,Washington D.C.,1,14,18
+34,CNN_Guns_in_America_Town_Hall,2016-01-07,USA,Virginia,Fairfax,6,22,24
+35,Announces_Candidacy,2007-02-10,USA,Illinois,Springfield,0,14,4
+36,START_Treaty_Presser,2010-04-08,USA,Illinois,Galesburg,2,16,7
+37,Gun_Violence_Exec_Order_23,2013-01-16,USA,no_state,Washington D.C.,6,14,20
+38,Barack_Obama_-_Jefferson-Jackson_Dinner,2007-11-10,USA,Iowa,Des Moines,22,4,0
+39,Fort_Bonifacio,2014-04-29,Philippines,no_state,Manila,23,15,20
+40,Midterm_Elections_Presser_2010,2010-11-03,USA,no_state,Washington D.C.,1,22,18
+41,State_of_the_Union_2015,2015-01-20,USA,no_state,Washington D.C.,14,1,24
+42,USSC_Ruling_Affordable_Care_Act,2012-06-28,USA,no_state,Washington D.C.,4,10,none
+43,Senate_Vote_Background_Check,2013-04-17,USA,no_state,Washington D.C.,6,17,none
+44,Joint_Presser_with_President_Benigno_Aquino,2014-04-28,Philippines,no_state,Manila,15,16,23
+45,Comprehensive_Immigration_Reform,2010-07-01,USA,no_state,Washington D.C.,17,18,9
+46,Worldwide_Troop_Talk,2015-09-11,USA,Maryland,Fort Meade,24,22,3
+47,Muammar_Qaddafi_Death,2011-10-21,USA,no_state,Washington D.C.,13,none,none
+48,Iraq_War_Responsibly_Ending,2011-10-21,USA,no_state,Washington D.C.,8,13,3
+49,UNGA_2012,2012-09-25,USA,New York,New York,13,21,7
+50,MLK_Remembrance,2010-01-17,USA,no_state,Washington D.C.,0,20,18
+51,Post_ASEAN_Presser_2016,2016-09-08,Laos,no_state,Vientiane,15,9,2
+52,Post_G7_Presser_Japan,2016-05-26,Japan,no_state,Shima City,22,15,2
+53,Sequester_Impact_Newport_News,2013-02-26,USA,Virginia,Newport News,1,22,14
+54,Jewish_American_Heritage_Month,2015-05-22,USA,no_state,Washington D.C.,11,2,20
+55,Presser_Unannounced_Heath_Care,2010-02-09,USA,no_state,Washington D.C.,4,18,1
+56,Farewell_Address,2017-01-10,USA,Illinois,Chicago,22,7,0
+57,Afghanistan_Troop_Reduction,2011-06-22,USA,no_state,Washington D.C.,8,9,21
+58,Kenya_Civil_Society_Meeting,2015-07-26,Kenya,no_state,Nairobi,15,19,21
+59,Sandy_Hook_Elementary_School,2012-12-14,USA,no_state,Washington D.C.,20,14,6
+60,Newtown_Vigil_Address,2012-12-16,USA,Connecticut,Newtown,20,14,6
+61,Alabama_Tornado_Devestation,2011-04-29,USA,Alabama,Alberta,19,22,20
+62,White_House_Correspondents_Dinner_2011,2011-04-30,USA,no_state,Washington D.C.,22,20,19
+63,Iran_Deal_American_University,2015-08-05,USA,no_state,Washington D.C.,2,11,8
+64,UNGA_68th_Session,2013-09-24,USA,New York,New York,2,11,7
+65,Obama-Romney_-_Second_Live_Debate,2012-10-17,USA,New York,Hempstead,1,5,17
+66,Weekly_Address_on_Cuba,2016-02-20,USA,no_state,Washington D.C.,12,none,none
+67,Elena_Kagan_USSC_Nomination,2010-05-10,USA,no_state,Washington D.C.,10,14,20
+68,Joe_Biden_Medal_of_Freedom,2017-01-12,USA,no_state,Washington D.C.,22,20,23
+69,Chile_Latin_America,2011-03-21,Chile,no_state,Santiago,12,15,7
+70,State_of_the_Nation_2009,2009-02-24,USA,no_state,Washington D.C.,18,14,1
+71,Comprehensive_Immigration_Reform_Vegas,2013-01-29,USA,Nevada,Las Vegas,17,14,20
+72,BRAIN_Initiative,2013-04-02,USA,no_state,Washington D.C.,24,14,19
+73,Iraq_War_After_4_Years,2007-03-21,USA,no_state,Washington D.C.,8,7,23
+74,Carnegie_Mellon_Economy,2010-06-02,USA,Pennsylvania,Pittsburgh,18,1,4
+75,First_Presidential_Weekly_Address,2009-01-24,USA,no_state,Washington D.C.,18,4,14
+76,Global_Climate_Message,2008-11-18,USA,no_state,Washington D.C.,5,15,7
+77,American_Legion_Conference,2011-08-30,USA,California,San Francisco,23,8,24
+78,Community_College_Plan,2015-01-09,USA,Tennessee,Knoxville,14,1,5
+79,Jamaica_Town_Hall,2015-04-09,Jamaica,no_state,Kingston,12,15,18
+80,Civil_Rights_Summit_LBJ,2014-04-10,USA,Texas,Austin,0,22,10
+81,State_of_the_Union_2011,2011-01-25,USA,no_state,Washington D.C.,14,1,24
+82,YSEALI_Town_Hall,2014-11-14,Myanmar,no_state,Yangon,15,21,14
+83,Rosa_Parks_Statue_Dedication,2013-02-27,USA,no_state,Washington D.C.,0,13,20
+84,Burundi_People_Message,2015-11-13,USA,no_state,Washington D.C.,7,20,13
+85,Buchenwald_Concentration_Camp,2009-06-04,USA,Indiana,Notre Dame,20,11,16
+86,South_Carolina_AME_Church_Shooting,2015-06-18,USA,no_state,Washington D.C.,20,0,6
+87,BP_Oil_Spill_Presser,2010-05-27,USA,no_state,Washington D.C.,5,9,17
+88,State_of_the_Union_2013,2013-02-12,USA,no_state,Washington D.C.,1,14,5
+89,VA_Misconduct_Allegations,2014-05-21,USA,no_state,Washington D.C.,23,4,9
+90,Navy_Yard_Shooting_Memorial,2013-09-22,USA,no_state,Washington D.C.,20,6,23
+91,ISIL_Pentagon_Update,2015-07-06,USA,no_state,Washington D.C.,3,21,9
+92,Walter_Cronkite_Memorial,2009-09-09,USA,New York,New York,22,20,7
+93,Chicago_Cubs_WH_Visit,2017-01-17,USA,no_state,Washington D.C.,22,20,14
+94,Yangon_University,2012-11-19,Myanmar,no_state,Yangon,7,15,17
+95,Benghazi_Attacks_Rose_Garden,2012-09-12,USA,no_state,Washington D.C.,13,20,10
+96,On_the_Passing_of_Nelson_Mandela,2013-12-05,USA,no_state,Washington D.C.,7,19,20
+97,Iraqi_Freedom_End,2010-08-31,USA,no_state,Washington D.C.,8,23,3
+98,COP21,2015-11-30,France,no_state,Paris,5,7,15
+99,ISIL_Presser_Post_Security_Council_Meeting,2016-08-04,USA,Virginia,Arlington,3,9,2
+100,Senate_Speech_on_Ohio_Electoral_Vote,2005-01-06,USA,no_state,Washington D.C.,22,10,0
+101,Naval_Academy_Commencement,2013-05-24,USA,Maryland,Annapolis,8,14,20
+102,Armed_Forces_Farewell,2017-01-04,USA,Colorado,Denver,8,20,23
+103,US_Govt_Shutdown_Statement,2013-10-02,USA,no_state,Washington D.C.,4,1,10
+104,Energy_Security_AAFB,2010-03-31,USA,Maryland,Camp Springs,5,8,2
+105,Candidate_Exploratory_Announcement,2007-01-16,USA,no_state,Washington D.C.,22,4,18
+106,NAACP_Coference_2015,2015-07-14,USA,Pennsylvania,Philadelphia,0,14,10
+107,ASU_Commencement,2009-05-14,USA,Arizona,Tempe,14,22,18
+108,Nobel_Lecture,2009-12-10,Norway,no_state,Oslo,7,8,20
+109,Illinois_General_Assembly,2016-02-10,USA,Illinois,Springfield,22,10,1
+110,Booker_T_Washington,2011-05-16,USA,Tennessee,Memphis,14,22,20
+111,Middle_Class_Economy,2013-02-15,USA,Illinois,Chicago,14,6,20
+112,Congressional_Black_Caucus,2015-09-19,USA,no_state,Washington D.C.,0,14,1
+113,Notre_Dame_Commencement,2009-05-18,Germany,no_state,Thuringia,20,10,14
+114,Benghazi_Remains_Transfer,2012-10-29,USA,no_state,Washington D.C.,13,20,8
+115,Angela_Merkel_Joint_Presser,2016-11-17,Germany,no_state,Berlin,16,22,7
+116,Auschwitz_and_Birkenau_Liberation_65th,2010-01-27,USA,no_state,Washington D.C.,20,11,16
+117,Iran_Nuclear_Agreement,2015-04-02,USA,no_state,Washington D.C.,2,11,20
+118,Disabled_Veterans_Conference,2010-08-02,USA,Virginia,Fairfax County,23,8,4
+119,GW_Fiscal_Policy,2011-04-13,Czech Republic,no_state,Prague,1,4,9
+120,Oval_Office_BP,2010-06-15,USA,no_state,Washington D.C.,5,20,8
+121,GOP_House_Issues_Conference,2010-01-29,USA,Maryland,Baltimore,1,4,22
+122,Energy_Security_Georgetown,2011-03-30,USA,no_state,Washington D.C.,5,2,14
+123,Senate_Floor_Speech_on_Voting_Rights_Act_Renewal,2006-07-20,USA,no_state,Washington D.C.,0,10,22
+124,DNC_2016,2016-07-27,USA,Pennsylvania,Philadelphia,22,0,6
+125,Brandenburg_Gate_Speech,2013-06-19,Germany,no_state,Berlin,7,20,2
+126,Righteous_Among_Nations_Ceremony,2016-01-27,USA,no_state,Washington D.C.,11,20,21
+127,IRS_Misconduct,2013-05-15,USA,no_state,Washington D.C.,9,17,10
+128,Joint_Presser_with_Raul_Castro,2016-03-21,Cuba,no_state,Havana,12,19,16
+129,Merrick_Garland_USSC_Nomination,2016-03-16,USA,no_state,Washington D.C.,10,14,20
+130,Affordable_Care_Act_Modifications_Presser,2013-11-14,USA,no_state,Washington D.C.,4,2,17
+131,Iran_Nuclear_Accord,2015-07-14,USA,no_state,Washington D.C.,2,20,3
+132,Cyber_Infrastructure_US,2009-05-29,USA,no_state,Washington D.C.,24,9,8
+133,Afghanistan_US_Troops_Bagram,2010-03-28,Afghanistan,no_state,Bagram,8,9,14
+134,National_Security_National_Archives,2009-05-21,USA,no_state,Washington D.C.,9,10,8
+135,YLAI_2016,2016-11-20,Peru,no_state,Lima,22,15,14
+136,Nurses_Association,2010-06-16,USA,Michigan,Ann Arbor,4,19,20
+137,Veterans_Day_Address_2013,2013-11-11,USA,Virginia,Arlington,23,8,20
+138,911_Pentagon_Memorial_2010,2010-09-11,USA,no_state,Washington D.C.,20,8,9
+139,VOX_Interview,2017-01-06,USA,no_state,Washington D.C.,4,22,19
+140,Gun_Violence_Reduction_Steps,2015-01-05,USA,no_state,Washington D.C.,6,24,4
+141,US_Detainees_Released,2016-01-17,USA,no_state,Washington D.C.,2,20,14
+142,Pope_Francis_White_House_Welcome,2015-09-23,USA,no_state,Washington D.C.,20,12,21
+143,Hostage_Policy_Review,2015-06-24,USA,no_state,Washington D.C.,9,20,3
+144,Graduation_Initiative,2009-07-14,USA,Michigan,Warren,14,18,1
+145,State_of_the_Union_2010,2010-01-27,USA,no_state,Washington D.C.,1,18,4
+146,Clean_Power_Plan,2015-08-03,USA,no_state,Washington D.C.,5,4,20
+147,American_Medical_Association,2009-06-15,USA,Illinois,Chicago,4,19,1
+148,Hurricane_Sandy_Red_Cross,2012-10-30,USA,no_state,Washington D.C.,19,9,22
+149,Hostage_Drone_Death,2015-04-23,USA,no_state,Washington D.C.,9,8,20
+150,United_Nations_Security_Council_2014,2014-09-24,USA,New York,New York,3,9,21
+151,Peru_Press_Conference,2016-11-20,Peru,no_state,Lima,15,22,16
+152,Boston_Marathon_Bombing_Second_Statement,2013-04-16,USA,no_state,Washington D.C.,9,20,19
+153,Martin_Dempsey_Retirement,2015-09-25,USA,no_state,Washington D.C.,8,20,19
+154,Gun_Violence_Connecticut_Speech,2013-04-08,USA,Connecticut,Hartford,6,22,20
+155,Intelligence_Reform_Presser,2013-08-09,USA,no_state,Washington D.C.,4,9,24
+156,UN_Ebola_Meeting,2014-09-25,USA,New York,New York,19,18,13
+157,Egypt_History_Revolution,2011-02-11,USA,no_state,Washington D.C.,7,13,21
+158,West_Fertilizer_Tragedy_Memorial,2013-04-25,USA,Texas,Waco,20,19,17
+159,Dorothy_Height_Eulogy,2010-04-29,USA,no_state,Washington D.C.,20,0,22
+160,Presser_on_the_Economy_and_Foreign_Policy,2014-08-01,USA,no_state,Washington D.C.,11,19,16
+161,Rio_de_Janeiro,2011-03-20,Brazil,no_state,Rio de Janeiro,7,5,20
+162,Final_Presidential_Presser_of_2016,2016-12-16,USA,no_state,Washington D.C.,22,16,9
+163,ASEAN_Summit_2016,2016-02-16,USA,California,Rancho Mirage,10,15,22
+164,Prescription_Drug_Abuse_Forum_WV,2015-10-21,USA,West Virginia,Charleston,19,4,14
+165,Dignity_and_Courage_of_Iranians,2009-06-23,USA,no_state,Washington D.C.,2,13,21
+166,Bagram_Air_Base_December_2010,2010-12-03,Afghanistan,no_state,Bagram,8,20,22
+167,Korean_War_Armistice_60,2013-07-27,South Korea,no_state,Seoul,23,20,7
+168,Berlin_Address,2008-07-24,Germany,no_state,Berlin,7,20,16
+169,Nomination_Victory,2008-06-03,USA,Minnesota,St. Paul,22,1,4
+170,American_Israel_Public_Affairs_Committee,2011-05-22,USA,no_state,Washington D.C.,11,2,9
+171,Final_Presser_of_2015,2015-12-18,USA,no_state,Washington D.C.,3,9,1
+172,Osama_bin_Laden_Death,2011-05-01,USA,no_state,Washington D.C.,9,8,21
+173,Knox_College_Commencement,2005-06-04,USA,Michigan,Kalamazoo,14,0,4
+174,White_House_Correspondents_Dinner_First,2009-05-09,USA,Delaware,Wilmington,22,18,14
+175,Post_Election_Economy,2012-11-09,USA,no_state,Washington D.C.,1,5,17
+176,US_v_Texas,2016-06-23,USA,no_state,Washington D.C.,10,17,none
+177,Ebola_Response_Update,2014-10-28,USA,no_state,Washington D.C.,19,4,17
+178,Ebenezer_Baptist,2008-01-20,USA,Georgia,Atlanta,0,4,20
+179,David_Petraeus_Etc_Presser,2012-11-14,USA,no_state,Washington D.C.,1,17,22
+180,Grande_Isle_Briefing,2010-05-28,USA,Louisiana,Grande Isle,5,19,9
+181,National_Chamber_of_Commerce,2011-02-07,USA,no_state,Washington D.C.,1,24,18
+182,White_House_Correspondents_Dinner_2016,2016-04-30,USA,no_state,Washington D.C.,22,10,7
+183,United_Nations_GA_2016,2016-09-20,USA,New York,New York,7,15,21
+184,Aging_Conference_White_House,2015-07-13,USA,no_state,Washington D.C.,4,1,18
+185,African_Union_Address,2015-07-28,Ethiopia,no_state,Addis Ababa,19,7,0
+186,Post_Election_Presser_2016,2016-11-14,USA,no_state,Washington D.C.,22,15,4
+187,Barack_Obama_-_G-20_Turkey,2015-11-16,Turkey,no_state,Antalya,3,21,9
+188,911_Pentagon_Memorial_2009,2009-09-11,USA,Virginia,Arlington,20,8,18
+189,Address_on_Libya,2011-03-18,USA,no_state,Washington D.C.,13,19,16
+190,Obama-Romney_-_Third_Live_Debate,2012-10-23,USA,Florida,Boca Raton,2,8,1
+191,Gun_Violence_Denver,2013-04-03,USA,Colorado,Denver,6,17,22
+192,Queensland_University,2014-11-15,Australia,no_state,Brisbane,15,7,19
+193,G20_Remarks_and_Presser_2009,2009-04-02,England,no_state,London,18,15,16
+194,US_Intelligence_Program_Review_Outcome,2014-01-17,USA,no_state,Washington D.C.,9,24,10
+195,Toomas_Ilves_Joint_Presser,2014-09-03,Estonia,no_state,Tallinn,16,8,3
+196,MLK_Memorial_Dedication,2011-10-16,USA,no_state,Washington D.C.,0,20,18
+197,Military_Strategy_Review,2012-01-05,USA,no_state,Washington D.C.,8,23,13
+198,Aviation_Security,2010-01-07,USA,no_state,Washington D.C.,9,21,7
+199,Miami_Dade_College_Commencement,2011-04-29,USA,Florida,Miami,14,0,17
+200,Strasbourg_Town_Hall,2009-04-03,France,no_state,Strasbourg,7,16,18
+201,General_McChrystal_Afghanistan,2010-06-23,USA,no_state,Washington D.C.,8,10,24
+202,Francois_Hollande_Joint_Presser,2015-11-24,USA,no_state,Washington D.C.,3,16,9
+203,Senate_Floor_Coretta_King,2006-01-31,USA,no_state,Washington D.C.,0,14,20
+204,NCTC_2015,2015-12-17,USA,Virginia,McLean,9,3,20
+205,New_Foundation_Georgetown,2009-04-14,USA,no_state,Washington D.C.,18,1,4
+206,Kalamazoo_HS_Commencement,2010-06-07,USA,Florida,Pensacola,14,22,20
+207,Debt_Compromise_Remarks,2011-08-02,USA,no_state,Washington D.C.,1,18,5
+208,British_Parliament,2011-05-25,England,no_state,London,7,8,13
+209,SSG_Bryan_Pitts_MOH,2014-07-21,USA,no_state,Washington D.C.,20,8,22
+210,Health_Care_George_Mason,2010-03-19,USA,Maryland,Silver Spring,4,1,22
+211,Barnard_College_Commencement,2012-05-14,USA,New York,New York,14,22,0
+212,State_of_the_Union_2014,2014-01-28,USA,no_state,Washington D.C.,14,1,8
+213,Repeal_Oil_and_Gas_Subsidies,2012-03-29,USA,no_state,Washington D.C.,5,4,none
+214,US_Military_Academy_Commencement_2014,2014-05-28,USA,New York,West Point,8,16,7
+215,Prayer_Breakfast_2011,2011-02-03,USA,no_state,Washington D.C.,20,21,4
+216,Press_Conference_of_Oct_10_2015,2015-10-02,USA,no_state,Washington D.C.,16,3,22
+217,Iraq_and_Ukraine,2014-08-28,USA,no_state,Washington D.C.,16,3,17
+218,Affordable_Care_Act_Logistical_Challenges,2013-10-21,USA,no_state,Washington D.C.,4,9,2
+219,West_Point_Commencement_2010,2010-05-22,USA,New York,West Point,8,7,20
+220,US_Air_Force_Commencement_Speech,2016-06-02,USA,Colorado,Colorado Springs,8,3,23
+221,Paris_Climate_Agreement,2015-12-12,USA,no_state,Washington D.C.,5,15,7
+222,Tribal_Nations_Conference,2011-12-02,USA,no_state,Washington D.C.,22,14,0
+223,Shinzo_Abe_Presser_Japan,2016-05-25,Japan,no_state,Shima City,15,16,2
+224,Antonin_Scalia_Passing,2016-02-13,USA,California,Rancho Mirage,10,20,22
+225,Carnegie_Robotics_Center,2011-06-24,USA,Pennsylvania,Pittsburgh,24,14,5
+226,NCCIC,2015-01-13,USA,Virginia,Arlington,24,9,19
+227,Mayors_Conference_2015,2015-06-19,USA,Illinois,Chicago,6,14,1
+228,Nuclear_Security_Summit_Presser,2016-04-01,USA,no_state,Washington D.C.,2,9,16
+229,Lorain_County_Community_College,2010-01-22,USA,Ohio,Elyria,4,18,14
+230,Veterans_Affairs_Misconduct_Findings,2014-05-30,USA,no_state,Washington D.C.,23,19,10
+231,ISIL_Briefing_June_2016,2016-06-14,USA,no_state,Washington D.C.,3,21,9
+232,NATO_2016_Press_Conference,2016-07-09,Poland,no_state,Warsaw,16,8,6
+233,Libya_Nation_Speech,2011-03-28,USA,no_state,Washington D.C.,13,8,1
+234,Naturalization_National_Archives,2015-12-15,USA,no_state,Washington D.C.,17,20,7
+235,Drones_and_Terrorism_National_Defense_University,2013-05-23,USA,no_state,Washington D.C.,9,8,21
+236,Xi_Jinping_Rose_Garden_Press_Conference,2015-09-25,USA,no_state,Washington D.C.,15,24,2
+237,Obama-Romney_-_First_Live_Debate,2012-10-03,USA,New York,New York,1,4,14
+238,Weekly_Address_Opioid_Addiction_Macklemore,2016-05-14,USA,no_state,Washington D.C.,19,4,22
+239,European_Youth,2014-03-26,Belgium,no_state,Brussels,16,7,20
+240,Regina_Benjamin_Nomination,2009-07-13,USA,no_state,Washington D.C.,4,19,1
+241,Second_Presidential_Election_Victory_Speech,2012-11-07,USA,Missouri,Joplin,22,20,1
+242,CIA_Intelligence_Community,2011-05-20,USA,Virginia,Langley,9,8,20
+243,Executive_Order_13681_Signing,2014-10-17,USA,no_state,Washington D.C.,24,18,4
+244,Orlando_Shootings_Statement,2016-06-12,USA,no_state,Washington D.C.,9,20,6
+245,NASA_21st_Century,2010-04-15,USA,Florida,Merritt Island,24,14,5
+246,Orlando_Community,2016-07-16,USA,Florida,Orlando,20,6,9
+247,Iowa_Caucus_Victory_Speech,2008-01-03,USA,Iowa,Des Moines,22,0,1
+248,Barack_Obama_-_ISIL_Update_02-25-16,2016-02-25,USA,no_state,Washington D.C.,3,13,none
+249,Ted_Kennedy_Eulogy,2009-08-29,USA,New York,Boston,20,22,4
+250,Guantanamo_Bay_Closing,2016-02-23,USA,no_state,Washington D.C.,9,10,1
+251,PM_Netanyahu_Speech,2015-03-03,USA,no_state,Washington D.C.,2,11,22
+252,Ferguson_and_Northern_Iraq,2014-08-14,USA,Massachusetts,Edgartown,3,8,19
+253,Libya_Violence_Must_Stop,2011-02-23,USA,no_state,Washington D.C.,13,15,19
+254,Announces_Commerce_Secretary_Designate,2008-12-03,USA,Illinois,Chicago,18,5,15
+255,United_Nations_General_Assembly_2014,2014-09-24,USA,New York,New York,21,7,3
+256,Recovery_and_Reinvestment_Act_2016,2016-02-26,USA,Florida,Jacksonville,5,18,23
+257,Presser_XMas_Terrorist_Attempt,2010-01-05,USA,no_state,Washington D.C.,9,none,none
+258,State_of_the_Union_2012,2012-01-24,USA,no_state,Washington D.C.,1,18,14
+259,On_Counterterrorism_Approach_2016,2016-12-06,USA,Florida,Tampa,3,9,8
+260,Farewell_to_Staff_and_Supporters,2017-01-20,USA,Maryland,Prince George County,22,23,20
+261,UK_Young_Leaders,2016-04-23,England,no_state,London,15,22,21
+262,Indonesia_University,2010-11-10,Indonesia,no_state,Jakarta,21,15,7
+263,Daniel_Inouye_Eulogy,2012-12-21,USA,no_state,Washington D.C.,22,20,23
+264,Iran_Accord_Statement,2013-11-23,USA,no_state,Washington D.C.,2,none,none
+265,Post_Iran_Nuclear_Accord_Presser,2015-07-15,USA,no_state,Washington D.C.,2,3,10
+266,Holy_Cross_Interfaith_Prayer_Service,2013-04-18,USA,Massachusetts,Boston,20,9,22
+267,Economic_Crisis_and_Executive_Compensation_Salary_Cap,2009-02-04,USA,no_state,Washington D.C.,18,8,4
+268,Iraq_War_Veteran_Gala_Toast,2012-02-29,USA,no_state,Washington D.C.,8,22,23
+269,Shimon_Peres_Medal_of_Freedom,2012-06-13,USA,no_state,Washington D.C.,11,22,20
+270,Hillary_Clinton_Endorsement,2016-06-09,USA,no_state,Washington D.C.,22,13,1
+271,United_Nations_on_Palestinian_Statehood,2011-09-21,USA,New York,New York,11,7,13
+272,First_Meeting_with_President_Elect_Donald_Trump,2016-11-10,USA,no_state,Washington D.C.,22,16,15
+273,Hradany_Square_Prague,2009-04-05,Czech Republic,no_state,Prague,2,7,16
+274,Barack_Obama_-_Dodd-Frank_Signing,2010-07-21,USA,no_state,Washington D.C.,18,24,17
+275,Prayer_Breakfast_2015,2015-02-05,USA,no_state,Washington D.C.,20,21,19
+276,New_Economic_Team,2008-11-24,USA,Illinois,Chicago,18,22,19
+277,Immigration_Senate_Call,2013-06-11,USA,no_state,Washington D.C.,17,14,4
+278,Health_Care_Law_Signing,2010-03-23,USA,no_state,Washington D.C.,4,17,1
+279,Senate_Floor_Speech_on_the_Patriot_Act,2005-12-15,USA,no_state,Washington D.C.,10,9,24
+280,Barack_Obama_-_13th_Amendment_150-Year_Anniversary,2015-12-09,USA,no_state,Washington D.C.,0,21,20
+281,Democrat_Caucus_Health_Care,2010-03-20,USA,no_state,Washington D.C.,4,22,1
+282,AIPAC_2012,2012-03-04,USA,no_state,Washington D.C.,11,2,23
+283,Speech_to_the_Vietnam_People,2016-05-24,Vietnam,no_state,Hanoi,15,23,7
+284,White_House_Correspondents_Dinner_2015,2015-04-25,USA,no_state,Washington D.C.,22,12,20
+285,Paris_Terrorist_Attacks,2015-11-13,USA,no_state,Washington D.C.,9,3,20
+286,Year_End_Presser_2013,2013-12-20,USA,no_state,Washington D.C.,4,2,9
+287,Presidential_Victory_Speech,2008-11-04,USA,Illinois,Chicago,22,0,18
+288,Brookings_Institute,2009-12-08,USA,no_state,Washington D.C.,18,1,5
+289,NY_NJ_Explosions,2016-09-19,USA,New York,West Point,9,3,20
+290,Civil_Society_Forum_Panama,2015-04-10,Panama,no_state,Panama City,12,7,0
+291,Morehouse_College_Commencement,2013-05-19,USA,Georgia,Atlanta,14,0,20
+292,Dallas_Police_Memorial_Address,2016-07-12,USA,Texas,Dallas,0,20,6
+293,Go_Presidential_Election_Outcome_2016,2016-11-09,USA,no_state,Washington D.C.,22,19,13
+294,Capetown_University,2013-06-30,South Africa,no_state,Cape Town,19,7,0
+295,2010_Budget_to_Congress,2010-02-01,USA,no_state,Washington D.C.,1,18,14
+296,Cuba_Policy_Changes,2014-12-17,USA,no_state,Washington D.C.,12,9,8
+297,USSC_Affordable_Care_Act_Ruling,2015-06-25,USA,no_state,Washington D.C.,4,10,23
+298,Howard_University_Commencement,2016-05-07,USA,no_state,Washington D.C.,0,14,10
+299,Europe_Peoples_Hannover,2016-04-25,Germany,no_state,Hanover,16,7,3
+300,ISIL_Force_Authorization_Request,2015-02-11,USA,no_state,Washington D.C.,3,8,13
+301,Indian_Parliament,2010-11-08,India,no_state,New Delhi,7,15,9
+302,MH_Flight_17_Downing,2014-07-18,USA,no_state,Washington D.C.,16,11,9
+303,Senate_Floor_Speech_on_Wall_Street_Bailout_Bill,2008-10-01,USA,no_state,Washington D.C.,18,1,22
+304,Australian_Parliament,2011-11-16,Australia,no_state,Canberra,15,7,8
+305,Iraq_Airstrikes_and_Humanitarian_Aid_New,2014-08-07,USA,no_state,Washington D.C.,8,3,13
+306,Cuba_People_Speech,2016-03-22,Cuba,no_state,Havana,12,0,20
+307,Defense_Dept_Personnel,2011-05-30,USA,no_state,Washington D.C.,8,23,20
+308,Ebola_CDC,2014-09-16,USA,Georgia,Atlanta,19,9,13
+309,Aung_San_Suu_Kyi_Presser,2014-11-14,Burma,no_state,Rangoon,15,10,17
+310,United_Nations_GA_2015,2015-09-28,USA,New York,New York,16,7,2
+311,Counter_ISIL_Campaign_Update,2015-12-14,USA,no_state,Washington D.C.,3,none,none
+312,Katrina_10_Years,2015-08-27,USA,Louisiana,New Orleans,14,20,19
+313,Laos_People,2016-09-06,Laos,no_state,Vientiane,15,20,7
+314,National_Holocaust_Memorial_Museum,2012-04-23,USA,no_state,Washington D.C.,20,11,13
+315,Weekly_Address_Iraq_War_Service,2011-12-17,USA,no_state,Washington D.C.,23,8,14
+316,Moscow_New_Economic_School,2009-07-07,Russia,no_state,Moscow,16,7,2
+317,Islamic_Society_Baltimore,2016-02-03,USA,Maryland,Baltimore,21,14,19
+318,Debt_Compromise_Agreement,2011-07-31,USA,no_state,Washington D.C.,1,10,2
+319,Joplin_Tornado_Victims_Memorial,2011-05-29,USA,Minnesota,Minneapolis,20,19,22
+320,Dangers_of_Default,2011-07-25,USA,no_state,Washington D.C.,1,20,10
+321,Iftar_Dinner_on_Religious_Tolerance,2010-08-13,USA,no_state,Washington D.C.,21,8,22
+322,Second_Presidential_Inaugural_Address,2013-01-21,USA,no_state,Washington D.C.,7,20,0
+323,Mandela_Public_Memorial_Address,2013-12-10,South Africa,no_state,Johannesburg,7,19,0
+324,Summit_Americas_Presser,2015-04-11,Panama,no_state,Panama City,12,2,15
+325,University_of_Chicago_Law_School,2016-04-07,USA,Illinois,Chicago,10,22,1
+326,Afghanistan_War_Troop_Surge,2009-12-01,USA,Arizona,Tucson,8,9,7
+327,Student_Aid_Bill_of_Rights,2015-03-10,USA,Georgia,Atlanta,14,1,18
+328,Barack_Obama_and_Benyamin_Netanyahu_Joint_Remarks,2011-05-20,USA,no_state,Washington D.C.,11,2,15
+329,Kenya_People_Speech,2015-07-26,Kenya,no_state,Nairobi,7,19,14
+330,White_House_Correspondent_Dinner_2014,2014-05-03,USA,no_state,Washington D.C.,22,6,4
+331,GWB_Library_Dedication,2013-04-25,USA,Texas,Dallas,22,20,17
+332,Countering_Violent_Religious_Extremism,2015-02-18,USA,no_state,Washington D.C.,21,3,9
+333,Post_G20_2016_Presser,2016-09-05,China,no_state,Hangzhou,15,16,18
+334,Summit_Americas_Plenary,2015-04-11,Panama,no_state,Panama City,12,15,5
+335,Barack_Obama_-_Weekly_Address_01-01-16,2016-01-01,USA,no_state,Washington D.C.,6,5,4
+336,SXSW,2016-03-11,USA,Texas,Austin,24,22,15
+337,Baton_Rouge_Flooding,2016-08-23,USA,Louisiana,Baton Rouge,19,22,9
+338,Rose_Garden_Economy_and_Deficit,2011-09-19,USA,no_state,Washington D.C.,1,4,none
+339,Barack_Obama_-_African-American_History_Museum_Dedication,2016-09-24,USA,no_state,Washington D.C.,0,20,22
+340,Post_G7_Conference_Presser_2015,2015-06-08,Germany,no_state,Krun,16,4,10
+341,Ghana_Parliament,2009-07-11,Ghana,no_state,Accra,19,7,0
+342,Malaysia_Presser_2015,2015-11-22,Malaysia,no_state,Kuala Lumpur,3,15,9
+343,DDay_70,2014-06-06,France,no_state,Normandy,23,20,8
+344,Senate_Speech_Iraq_Federalism_Amendment,2007-03-13,USA,no_state,Washington D.C.,8,3,18
+345,Odyssey_Dawn,2011-03-19,Brazil,no_state,Brasilia,13,8,9
+346,Flint_Michigan_Community,2016-05-04,USA,Michigan,Flint,14,19,22
+347,Iraq_Multinational_Troops,2009-04-07,Iraq,no_state,Baghdad,8,22,23
+348,Hurricane_Sandy_ERT,2012-10-29,USA,no_state,Washington D.C.,19,9,22
+349,Ebola_NIH_Research,2014-12-02,USA,Maryland,Bethesda,19,20,none
+350,Prayer_Breakfast_2010,2010-02-04,USA,no_state,Washington D.C.,20,21,17
+351,More_Perfect_Union,2008-03-18,USA,Pennsylvania,Philadelphia,0,4,19
+352,Hispanic_Chamber_of_Commerce,2009-03-10,USA,no_state,Washington D.C.,14,18,2
+353,Final_Presser_of_2014,2014-12-19,USA,no_state,Washington D.C.,12,24,1
+354,Iraq_War_Camp_Lejeune,2009-02-27,USA,North Carolina,Jacksonville,8,3,23
+355,Chemical_Weapons_Syria,2013-08-31,USA,no_state,Washington D.C.,13,3,8
+356,Syria_Speech_to_the_Nation,2013-09-10,USA,no_state,Washington D.C.,3,13,8
+357,Jerusalem_Intl_Convention_Center_Speech,2013-03-21,Israel,no_state,Jerusalem,11,7,14
+358,Salvatore_Giunta_Medal_of_Honor,2010-11-16,USA,no_state,Washington D.C.,8,20,22
+359,Barack_Obama_-_Press_Conference_04-17-14,2014-04-17,USA,no_state,Washington D.C.,4,16,17
+360,Kennedy_Center_Honorees_2016,2016-12-04,USA,no_state,Washington D.C.,22,20,14
+361,United_State_of_Women,2016-06-14,USA,no_state,Washington D.C.,0,14,22
+362,White_House_Correspondents_Dinner_2010,2010-05-01,USA,no_state,Washington D.C.,22,4,20
+363,Third_Major_Press_Conference,2009-06-23,USA,no_state,Washington D.C.,4,2,18
+364,Lincoln_Bicentennial,2009-02-12,USA,no_state,Washington D.C.,0,8,6
+365,Pensacola_Military_Personnel,2010-06-15,USA,Georgia,Atlanta,8,5,23
+366,Ted_Kennedy_Institute_Dedication,2015-03-30,USA,Massachusetts,Boston,22,20,4
+367,Selma_50_March,2015-03-07,USA,Alabama,Selma,0,20,23
+368,Reforming_Wall_Street,2010-04-22,USA,New York,New York,18,24,17
+369,First_Press_Conference,2008-11-07,USA,Illinois,Chicago,18,9,22
+370,Final_State_of_the_Union_Address,2016-01-12,USA,no_state,Washington D.C.,3,1,14
+371,Lincoln_Memorial,2008-01-18,USA,no_state,Washington D.C.,0,20,22
+372,Golden_State_Warriors,2016-02-04,USA,no_state,Washington D.C.,22,14,6
+373,First_Presidential_Prime_Time_Presser,2009-02-09,USA,no_state,Washington D.C.,18,1,22
+374,Canada_Parliament,2016-06-29,Canada,no_state,Ottawa,15,12,7
+375,Trayvon_Martin,2013-07-19,USA,no_state,Washington D.C.,19,0,9
+376,Tucson_Memorial_Address,2011-01-12,USA,Virginia,Arlington,20,10,22
+377,Hankuk_University,2012-03-26,Korea,no_state,Seoul,2,7,5
+378,Turkish_Parliament,2009-04-06,Turkey,no_state,Ankara,21,7,11
+379,New_Nationalism_at_Osawatomie_HS,2011-12-06,USA,Kansas,Osawatomie,1,18,14
+380,Clementa_Pinckney_Eulogy,2015-06-26,USA,South Carolina,Charleston,20,0,6
+381,Stanford_Cybersecurity_Summit,2015-02-13,USA,California,Stanford,24,14,7
+382,Robert_Bryd_Eulogy,2010-07-02,USA,West Virginia,Charleston,20,10,22
+383,YSEALI_Town_Hall_2014,2014-04-27,Malaysia,no_state,Kuala Lumpur,15,14,21
+384,Fort_Campbell,2011-05-06,USA,no_state,Washington D.C.,8,20,9
+385,Mexico_Address,2013-05-02,Mexico,no_state,Mexico City,17,15,5
+386,Afghanistan_Statement,2015-10-15,USA,no_state,Washington D.C.,8,9,15
+387,Tax_Presser,2010-12-10,USA,no_state,Washington D.C.,1,18,22
+388,Polish_Freedom_Day_25,2014-06-04,Poland,no_state,Warsaw,16,7,20
+389,Estonia_People,2014-09-03,Estonia,no_state,Tallinn,16,7,20
+390,Knox_College_Economy,2013-07-24,USA,Illinois,Galesburg,1,14,4
+391,Pearl_Harbor_Address,2016-12-27,USA,Hawaii,Oahu,20,15,23
+392,UN_High_Level_Libya,2011-09-20,USA,New York,New York,13,0,14
+393,Dreamplex_Event_Address,2016-05-24,Vietnam,no_state,Ho Chi Minh City,15,24,14
+394,Final_First_Term_Presser,2013-01-14,USA,no_state,Washington D.C.,1,6,10
+395,No_Child_Left_Behind_Blueprint,2010-03-13,USA,no_state,Washington D.C.,14,23,16
+396,United_Nations_General_Assembly,2009-09-23,USA,New York,New York,11,7,2
+397,Eulogy_West_Virginia_Coal_Miners,2010-04-25,USA,West Virginia,Beckley,20,5,19
+398,UNGA_2010,2010-09-23,USA,New York,New York,11,7,18
+399,Emil_Kapaun_Medal_of_Honor,2013-04-11,USA,no_state,Washington D.C.,20,23,8
+400,Beau_Biden_Eulogy,2015-06-06,USA,Virginia,Arlington,20,22,14
+401,Rosa_Parks,2005-10-25,USA,no_state,Washington D.C.,0,10,none
+402,FTC_2014,2015-01-12,USA,no_state,Washington D.C.,24,14,6
+403,DDay_65,2009-06-05,France,no_state,Normandy,23,20,7
+404,Iraq_Air_Strike_Humanitarian_Update_1,2014-08-09,USA,no_state,Washington D.C.,3,8,16
+405,Justice_Stevens_and_West_Virginia_Mining_Tragedy,2010-04-09,USA,no_state,Washington D.C.,10,20,19
+406,Fathers_Day_2010,2010-06-21,USA,no_state,Washington D.C.,20,14,10
+407,ISIL_,2014-09-10,USA,no_state,Washington D.C.,3,8,21
+408,Vietnam_YSEALI,2016-05-25,Vietnam,no_state,Ho Chi Minh City,15,14,22
+409,Saudi_Arabia_Presser,2005-04-21,Saudi Arabia,no_state,Riyadh,3,2,15
+410,Let_Freedom_Ring_Ceremony,2013-08-28,USA,no_state,Washington D.C.,0,14,23
+411,To_Congress_on_Health_Care,2009-09-09,USA,no_state,Washington D.C.,4,1,18
+412,National_Wireless_Initiative,2011-02-10,USA,Michigan,Marquette,14,24,1
+413,Congress_Call_Health_Care_Reform,2010-03-03,USA,no_state,Washington D.C.,4,1,none
+414,Syria_Press_Conference,2013-04-30,USA,no_state,Washington D.C.,9,4,17
+415,Middle_East_Diplomacy,2011-05-19,USA,no_state,Washington D.C.,11,13,7
+416,Every_Student_Succeeds_Signing,2015-12-10,USA,no_state,Washington D.C.,14,9,10
+417,Birth_Certificate_Release,2011-04-27,USA,no_state,Washington D.C.,22,1,24
+418,Inaugural_Address,2009-01-20,USA,no_state,Washington D.C.,20,7,18
+419,Fort_Hoot_Memorial,2009-11-10,USA,Texas,Fort Hood,8,20,23
+420,911_After_15_Years,2016-09-11,USA,Virginia,Arlington,20,9,8
+421,VFW_2012,2012-07-23,USA,Nevada,Reno,23,8,1
+422,UN_Iran_Sanctions,2010-06-09,USA,no_state,Washington D.C.,2,13,7
+423,Wakefield_Back_to_High_School,2009-09-08,USA,Virginia,Arlington,14,10,22
+424,CIA_First_Speech,2009-04-20,USA,Virginia,Langley,9,24,22
+425,Health_Care_Bill_Passage,2010-03-21,USA,no_state,Washington D.C.,4,22,1
+426,Hiroshima_Peace_Memorial_Address,2016-05-27,Japan,no_state,Hiroshima,7,20,23
+427,Clinton_Global_Initiative_Human_Trafficking,2012-09-25,USA,Kentucky,Hopkinsville,20,15,24
+428,Boston_Marathon_Bombing_Third_Statement,2013-04-19,USA,no_state,Washington D.C.,9,20,22
+429,Second_Democratic_Nomination_Acceptance,2012-09-06,USA,North Carolina,Charlotte,1,14,5
+430,Shimon_Peres_Memorial,2016-09-30,Israel,no_state,Jerusalem,11,20,0
+431,ASEAN_Business_2015,2015-11-21,Malaysia,no_state,Kuala Lumpur,15,17,24
+432,Finance_Crisis_Fee,2010-01-14,USA,no_state,Washington D.C.,18,none,none
+433,YLAI_Town_Hall,2016-03-23,Argentina,no_state,Buenos Aires,12,22,11
+434,Oval_Office_Counter_Terrorism_Agenda,2015-12-06,USA,no_state,Washington D.C.,3,21,9
+435,Michigan_University_Commencement,2010-05-01,USA,New York,New York,22,14,7
