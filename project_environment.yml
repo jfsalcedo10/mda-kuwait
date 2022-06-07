@@ -12,4 +12,9 @@ dependencies:
   - dash-labs
   - autopep8
   - geopandas
+  - seaborn
+  - neo4j-python-driver
+  - networkx
+  - geopy
+  
 prefix: C:\Users\juans\anaconda3\envs\mda_2022
