@@ -51,165 +51,26 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <!-- <li><a href="#usage">Usage</a></li> -->
-    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-All files related to the analysis are stored in the [components](https://github.com/jfsalcedo10/mda-kuwait/components) folder. The folder contains the following subfolders:
+All files related to the analysis are stored in the [components](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components) folder. The folder contains the following subfolders:
 
-[data](https://github.com/jfsalcedo10/mda-kuwait/components/data): all the data used in the notebooks
+[data](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/data): all the data used in the notebooks
 
-[notebooks](https://github.com/jfsalcedo10/mda-kuwait/components/notebooks): jupyter notebooks containing the analysis
+[notebooks](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/notebooks): jupyter notebooks containing the analysis
 
-[pdfs](https://github.com/jfsalcedo10/mda-kuwait/components/pdfs): some example PDFs of the speeches, the code to get all PDF files is given in the `Download_PDFs.ipynb` notebook
+[pdfs](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/pdfs): some example PDFs of the speeches, the code to get all PDF files is given in the `Download_PDFs.ipynb` notebook
 
-[scripts](https://github.com/jfsalcedo10/mda-kuwait/components/scripts): additional python scripts containing classes and functions used in the notebooks. This folder also contains two SAS programs, the output of which was used in the `Sentiment_Mixed_Model_SAS_Output.ipynb` notebook. The `Sentiment_Mixed_Model.ipynb` notebook contains an equivalent analysis in python.
+[scripts](https://github.com/jfsalcedo10/mda-kuwait/tree/main/components/scripts): additional python scripts containing classes and functions used in the notebooks. This folder also contains two SAS programs, the output of which was used in the `Sentiment_Mixed_Model_SAS_Output.ipynb` notebook. The `Sentiment_Mixed_Model.ipynb` notebook contains an equivalent analysis in python.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [Python](https://nextjs.org/)
-<!-- * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com) -->
+The url for the webapp related to this project is https://mda-kuwait-project.herokuapp.com.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* Anaconda - [Download here](https://www.anaconda.com/products/individual)
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/jfsalcedo10/mda-kuwait.git
-   ```
-2. Create conda environment with ´project_environment.yml´ file 
-   ```sh
-   conda create --name <your_env_name> --file project_environment.yml
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-<!-- ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
- -->
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/jfsalcedo10/mda-kuwait/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@jfsalcedo10](https://twitter.com/jfsalcedo10) - jfsalcedo199710@gmail.com
-
-Project Link: [https://github.com/jfsalcedo10/mda-kuwait](https://github.com/jfsalcedo10/mda-kuwait)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
