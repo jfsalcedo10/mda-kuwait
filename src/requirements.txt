@@ -1,21 +1,23 @@
-dash @ file:///home/conda/feedstock_root/build_artifacts/dash_1645277724653/work
-dash-bootstrap-components @ file:///home/conda/feedstock_root/build_artifacts/dash-bootstrap-components_1649012604245/work
+dash==2.0.0
+dash-bootstrap-components==1.1.0
 Fiona==1.8.13.post1
-Flask @ file:///opt/conda/conda-bld/flask_1648041541647/work
+Flask==2.0.3
 Flask-Compress==1.5.0
+fonttools==4.25.0
 GDAL==3.0.2
-geographiclib @ file:///home/conda/feedstock_root/build_artifacts/geographiclib_1624386157733/work
-geopandas @ file:///tmp/build/80754af9/geopandas_1627401391374/work
-geopy @ file:///home/conda/feedstock_root/build_artifacts/geopy_1626114677070/work
-json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
-jsonschema @ file:///C:/ci/jsonschema_1650008058050/work
-matplotlib @ file:///C:/ci/matplotlib-suite_1647423638658/work
-matplotlib-inline @ file:///tmp/build/80754af9/matplotlib-inline_1628242447089/work
-mistune @ file:///C:/ci/mistune_1607359457024/work
-numpy @ file:///C:/ci/numpy_and_numpy_base_1652784039997/work
-packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
-pandas @ file:///C:/ci/pandas_1650373458095/work
-plotly @ file:///opt/conda/conda-bld/plotly_1646671701182/work
-requests @ file:///opt/conda/conda-bld/requests_1641824580448/work
-scipy @ file:///C:/ci/scipy_1641555170412/work
-seaborn @ file:///tmp/build/80754af9/seaborn_1629307859561/work
+geographiclib==1.52
+geopandas==0.9.0
+geopy==2.2.0
+json5==0.9.6
+jsonschema==4.4.0
+matplotlib==3.5.1
+matplotlib-inline==0.1.2
+numpy==1.22.3
+packaging==21.3
+pandas==1.4.2
+Pillow==9.0.1
+pip==21.2.4
+plotly==5.6.0
+requests==2.27.1
+scipy==1.7.3
+seaborn==0.11.2
