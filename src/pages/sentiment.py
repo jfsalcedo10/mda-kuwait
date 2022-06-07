@@ -1,11 +1,19 @@
 from dash import dcc,html, Input, Output, callback
 import dash_bootstrap_components as dbc
 from pages.constants import TITLE_STYLE, PARAGRAPH_STYLE
+from utils.sentiment_crud import SentimentCRUD
+
+sentiment_plotter = SentimentCRUD()
+
+acc_sentiment_time = [
+    html.P('Sentiment over time'),
+    dcc.Graph(figure= sentiment_plotter.plot_sentiment_over_time())
+]
 
 accordion = dbc.Accordion(
         [
             dbc.AccordionItem(
-                "This is the content of the first section", title="Sentiment over time"
+                acc_sentiment_time, title="Sentiment over time"
             ),
             dbc.AccordionItem(
                 "This is the content of the second section", title="Sentiment per location"

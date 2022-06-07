@@ -1,10 +1,14 @@
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objects as go
 
 class TopicCRUD(object):
     def __init__(self):
         self.base_df = pd.read_csv('./data/topic_plots_base.csv')
+        # self.df_t = pd.read_csv('./data/topic_')
+        self.df_p = pd.read_csv('./data/processed_speeches.txt')
+        self.df_te = pd.read_csv("./data/token_embedding.txt").drop('Unnamed: 0', axis = 1)
 
     def get_second_topic(self, topic_ix = 22):
         #################
@@ -106,11 +110,105 @@ class TopicCRUD(object):
                         '<br><b>City</b>: %{x}<br><b>Count</b>: %{y}')  
         return fig
     
-    def get_top_tokens_per_topic(self):
-        pass
+    def get_top_tokens_per_topic(self, topic_ix = 4, nb_tokens = 10):
+        # INPUT
+
+        #################
+
+        # NECESSARY DATA
+
+        # df_t
+        df_c = self.df_p.merge(self.base_df, on='title', validate="one_to_one")
+        df_c = df_c[['title', 'fully_processed', 'main_topic_1_index']]
+
+        #################
+        topic_ix = topic_ix-1
+        title = f'Topic {topic_ix+1}'
+
+        # if plotted at the same time as the previous plot, this line can be left out (is already in previous cell)
+        words = self.df_te.loc[topic_ix, :].sort_values(ascending=False).index.values[:nb_tokens] 
+
+        # get the fully processed speeches for the given topic
+        speeches = df_c.loc[df_c.main_topic_1_index==topic_ix,'fully_processed']
+        # count the number of words in the topic
+        nb_words_topic = speeches.str.split().str.len().sum()
+        # count the number of words in all speeches
+        nb_words_total = self.df_p.fully_processed.str.split().str.len().sum()
+
+        count_for_topic = []
+        total_count = []
+
+        for w in words:
+            # the count is only increased if the word is not part of another word (for example if w='gin', the count 
+            # would not be increased if the word 'aging' is encountered)
+            w = r'\b' + w.lower() + r'\b'
+            # count the frequency of the word in the topic (as a percentage)
+            count_for_topic.append(100*speeches.str.count(w).sum()/nb_words_topic)
+            # count the frequency of the word in all speeches (as a percentage)
+            total_count.append(100*df_c.fully_processed.str.count(w).sum()/nb_words_total)
+
+        fig = go.Figure(data=[
+            go.Bar(name='Total percentage', x=words, y=total_count, text=total_count, base=words,
+                texttemplate = "%{text:.1f}%", marker=dict(color=px.colors.qualitative.Plotly[5])),
+            go.Bar(name='Topic percentage', x=words, y=count_for_topic, text=count_for_topic, base=words,
+                texttemplate = "%{text:.1f}%", marker=dict(color=px.colors.qualitative.Plotly[6]))
+        ])
+
+        fig.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
+        fig.update_layout(title={'text':title, 'y':0.9, 'x':0.5, 'xanchor':'center', 'yanchor': 'top'},
+                        barmode='group', uniformtext_minsize=12)
+        return fig
     
-    def get_token_influence(self):
-        pass
+    def get_token_influence(self, word = 'gun'):
+
+        #################
+
+        # NECESSARY DATA
+
+        # df_t
+
+        # df_p = pd.read_csv(csv_path / "processed_speeches.txt")
+        df_c = self.df_p.merge(self.base_df, on='title', validate="one_to_one")
+        df_c = df_c[['title', 'fully_processed', 'main_topic_1_index']]
+
+        #################
+
+        topics = list(range(0,25))
+        title = f'Word: {word}'
+
+        # the input has to be a word by itself, it cannot be part of another word. For example, 'gin' won't be counted when it
+        # is part of another word like 'aging'
+        word = r'\b' + word.lower() + r'\b'
+
+        # total number of words in all speeches
+        nb_words_total = self.df_p.fully_processed.str.split().str.len().sum()
+        # frequency of the word in all speeches (as percentage)
+        total_count = 100*df_c.fully_processed.str.count(word).sum()/nb_words_total
+
+        count_for_topic = []
+        for t in topics:
+            # get the speeches for the topic
+            speeches = df_c.loc[df_c.main_topic_1_index==t,'fully_processed']
+            # number of words for the topic
+            nb_words_topic = speeches.str.split().str.len().sum()
+            # frequency of the word in the topic (as percentage)
+            count_for_topic.append(100*speeches.str.count(word).sum()/nb_words_topic)
+
+        topics = [str(int(t)+1) for t in topics]
+
+        fig = go.Figure(data=[
+            go.Bar(name='Topic percentage', x=topics, y=count_for_topic, text=count_for_topic,
+                texttemplate = "%{text:.1f}%")
+        ])
+
+        fig.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
+        fig.update_layout(title={'text':title, 'y':0.9, 'x':0.5, 'xanchor':'center', 'yanchor': 'top'},
+                        barmode='group', uniformtext_minsize=15)
+
+
+        fig.update_layout(xaxis = dict(title = 'Topic', tickmode = 'linear', tick0 = 1, dtick = 1 ),
+            yaxis = dict(title= 'Percentage'))
+        return fig
 
     def get_speech_topics(self):
         pass

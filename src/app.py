@@ -146,4 +146,4 @@ def handle_page(pathname, n_clicks, is_open):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8888)
+    app.run_server(host= "0.0.0.0",debug=True, port=8888)
